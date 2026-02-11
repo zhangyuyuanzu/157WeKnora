@@ -198,7 +198,8 @@ stop_services() {
     fi
     
     cd "$PROJECT_ROOT"
-    "$DOCKER_COMPOSE_BIN" $DOCKER_COMPOSE_SUBCMD -f docker-compose.dev.yml down
+    # 停止所有服务（包括所有 profile 的服务）
+    "$DOCKER_COMPOSE_BIN" $DOCKER_COMPOSE_SUBCMD -f docker-compose.dev.yml --profile full down
     
     if [ $? -eq 0 ]; then
         log_success "所有服务已停止"
