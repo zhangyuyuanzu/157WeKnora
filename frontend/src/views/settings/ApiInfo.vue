@@ -287,7 +287,7 @@ onMounted(() => {
   }
 
   .doc-link {
-    color: #07C05F;
+    color: #0052d9;
     text-decoration: none;
     font-weight: 500;
     display: inline-flex;

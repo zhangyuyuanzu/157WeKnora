@@ -3403,7 +3403,7 @@ watch(() => entries.value.map(e => ({
         justify-content: center;
         font-size: 16px;
         font-weight: 600;
-        color: #00a870;
+        color: #0052d9;
         line-height: 1;
         transition: background 0.2s ease, color 0.2s ease;
 
@@ -3429,7 +3429,7 @@ watch(() => entries.value.map(e => ({
 
         &:hover {
           background: #f3f5f7;
-          color: #00a870;
+          color: #0052d9;
         }
       }
     }
@@ -3553,11 +3553,11 @@ watch(() => entries.value.map(e => ({
 
       &.active {
         background: #e6f7ec;
-        color: #07c05f;
+        color: #0052d9;
         font-weight: 500;
 
         .faq-tag-left .t-icon {
-          color: #07c05f;
+          color: #0052d9;
         }
 
         .tag-name {
@@ -3566,7 +3566,7 @@ watch(() => entries.value.map(e => ({
 
         .faq-tag-count {
           background: #b8f0d3;
-          color: #07c05f;
+          color: #0052d9;
           font-weight: 600;
         }
 
@@ -3616,11 +3616,11 @@ watch(() => entries.value.map(e => ({
 
         :deep(.tag-action-btn.confirm) {
           background: #eefcf5;
-          color: #059669;
+          color: #0052d9;
 
           &:hover {
             background: #d9f7e9;
-            color: #047857;
+            color: #003cab;
           }
         }
 
@@ -3670,7 +3670,7 @@ watch(() => entries.value.map(e => ({
         :deep(.t-input.t-is-focused),
         :deep(.t-input__wrap:hover),
         :deep(.t-input__wrap.t-is-focused) {
-          border-bottom-color: #00a870;
+          border-bottom-color: #0052d9;
         }
       }
 
@@ -3763,7 +3763,7 @@ watch(() => entries.value.map(e => ({
     &:focus,
     &.t-is-focused {
       background-color: #fff;
-      border-color: #00a870;
+      border-color: #0052d9;
     }
   }
 
@@ -3978,11 +3978,11 @@ watch(() => entries.value.map(e => ({
 
       &.icon-loading {
         animation: rotate 1s linear infinite;
-        color: #00a870;
+        color: #0052d9;
       }
 
       &.icon-success {
-        color: #00a870;
+        color: #0052d9;
       }
 
       &.icon-error {
@@ -4083,7 +4083,7 @@ watch(() => entries.value.map(e => ({
       gap: 8px;
 
       .result-icon {
-        color: #07C05F;
+        color: #0052d9;
         flex-shrink: 0;
       }
 
@@ -4151,7 +4151,7 @@ watch(() => entries.value.map(e => ({
       }
 
       &.success .stat-value {
-        color: #07C05F;
+        color: #0052d9;
       }
 
       &.failed .stat-value {
@@ -4214,7 +4214,7 @@ watch(() => entries.value.map(e => ({
 
   &:hover:not(:disabled) {
     background: #e6f7ec;
-    color: #07c05f;
+    color: #0052d9;
   }
 
   &:disabled {
@@ -4260,12 +4260,12 @@ watch(() => entries.value.map(e => ({
   height: fit-content;
 
   &:hover {
-    border-color: #07C05F;
+    border-color: #0052d9;
     box-shadow: 0 2px 8px rgba(7, 192, 95, 0.1);
   }
 
   &.selected {
-    border-color: #07C05F;
+    border-color: #0052d9;
     background: #F0FDF4;
     box-shadow: 0 2px 8px rgba(7, 192, 95, 0.15);
   }
@@ -4428,8 +4428,8 @@ watch(() => entries.value.map(e => ({
     transition: all 0.2s ease;
 
     &:hover {
-      border-color: #07c05f;
-      color: #059669;
+      border-color: #0052d9;
+      color: #0052d9;
       background: #ecfdf5;
     }
   }
@@ -4567,7 +4567,7 @@ watch(() => entries.value.map(e => ({
       content: '';
       width: 3px;
       height: 10px;
-      background: #07C05F;
+      background: #0052d9;
       border-radius: 2px;
       flex-shrink: 0;
     }
@@ -4603,7 +4603,7 @@ watch(() => entries.value.map(e => ({
   }
 
   &.answers .faq-section-label::before {
-    background: #07C05F;
+    background: #0052d9;
   }
 
   &.similar .faq-section-label::before {
@@ -4846,7 +4846,7 @@ watch(() => entries.value.map(e => ({
     transition: background 0.2s;
 
     &:hover {
-      background: #07C05F;
+      background: #0052d9;
     }
   }
 }
@@ -4896,8 +4896,8 @@ watch(() => entries.value.map(e => ({
   white-space: nowrap;
 
   &:hover {
-    border-color: #07C05F;
-    color: #07C05F;
+    border-color: #0052d9;
+    color: #0052d9;
     background: #f0fdf4;
   }
 
@@ -4944,13 +4944,13 @@ watch(() => entries.value.map(e => ({
     transition: all 0.2s ease;
 
     &:hover:not(.t-is-disabled) {
-      border-color: #07c05f;
-      color: #07c05f;
+      border-color: #0052d9;
+      color: #0052d9;
     }
 
     &.t-is-checked {
-      background: #07c05f;
-      border-color: #07c05f;
+      background: #0052d9;
+      border-color: #0052d9;
       color: #fff;
       font-weight: 500;
 
@@ -4993,12 +4993,12 @@ watch(() => entries.value.map(e => ({
   justify-content: center;
 
   &:hover {
-    border-color: #07C05F;
+    border-color: #0052d9;
     background: #f0fdf4;
   }
 
   &.has-file {
-    border-color: #07C05F;
+    border-color: #0052d9;
     background: #f0fdf4;
     border-style: solid;
   }
@@ -5014,7 +5014,7 @@ watch(() => entries.value.map(e => ({
 }
 
 .upload-icon {
-  color: #07C05F;
+  color: #0052d9;
   transition: transform 0.2s ease;
 }
 
@@ -5045,7 +5045,7 @@ watch(() => entries.value.map(e => ({
   font-family: "PingFang SC";
   font-size: 14px;
   font-weight: 500;
-  color: #07C05F;
+  color: #0052d9;
   word-break: break-all;
 }
 
@@ -5077,7 +5077,7 @@ watch(() => entries.value.map(e => ({
 }
 
 .preview-icon {
-  color: #07C05F;
+  color: #0052d9;
   flex-shrink: 0;
 }
 
@@ -5106,7 +5106,7 @@ watch(() => entries.value.map(e => ({
   transition: all 0.2s ease;
 
   &:hover {
-    border-color: #07C05F;
+    border-color: #0052d9;
     box-shadow: 0 2px 4px rgba(7, 192, 95, 0.08);
   }
 }
@@ -5118,7 +5118,7 @@ watch(() => entries.value.map(e => ({
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(135deg, #07C05F 0%, #05a04f 100%);
+  background: linear-gradient(135deg, #0052d9 0%, #05a04f 100%);
   color: #ffffff;
   border-radius: 4px;
   font-family: "PingFang SC";
@@ -5205,7 +5205,7 @@ watch(() => entries.value.map(e => ({
     transition: background 0.2s;
 
     &:hover {
-      background: #07C05F;
+      background: #0052d9;
     }
   }
 
@@ -5258,8 +5258,8 @@ watch(() => entries.value.map(e => ({
   }
 
   :deep(.add-item-btn) {
-    background: #07C05F !important;
-    border: 1px solid #07C05F !important;
+    background: #0052d9 !important;
+    border: 1px solid #0052d9 !important;
     border-radius: 8px !important;
     color: #ffffff !important;
     display: flex;
@@ -5338,7 +5338,7 @@ watch(() => entries.value.map(e => ({
 
   &:hover {
     background: #fafafa;
-    border-color: #07C05F;
+    border-color: #0052d9;
     box-shadow: 0 2px 8px rgba(7, 192, 95, 0.12);
     transform: translateY(-1px);
   }
@@ -5484,7 +5484,7 @@ watch(() => entries.value.map(e => ({
       top: 20px;
       width: 3px;
       height: calc(100% - 40px);
-      background: #07C05F;
+      background: #0052d9;
       border-radius: 0 2px 2px 0;
     }
 
@@ -5638,11 +5638,11 @@ watch(() => entries.value.map(e => ({
   transition: all 0.2s ease;
 
   &:hover {
-    border-color: #07C05F;
+    border-color: #0052d9;
   }
 
   &:focus-within {
-    border-color: #07C05F;
+    border-color: #0052d9;
     box-shadow: 0 0 0 3px rgba(7, 192, 95, 0.1);
   }
 
@@ -5683,11 +5683,11 @@ watch(() => entries.value.map(e => ({
   transition: all 0.2s ease;
 
   &:hover {
-    border-color: #07C05F;
+    border-color: #0052d9;
   }
 
   &:focus-within {
-    border-color: #07C05F;
+    border-color: #0052d9;
     box-shadow: 0 0 0 3px rgba(7, 192, 95, 0.1);
   }
 
@@ -5716,8 +5716,8 @@ watch(() => entries.value.map(e => ({
 }
 
 :deep(.t-button--theme-primary) {
-  background-color: #07c05f;
-  border-color: #07c05f;
+  background-color: #0052d9;
+  border-color: #0052d9;
   
   &:hover {
     background-color: #05a04f;
@@ -5753,9 +5753,9 @@ watch(() => entries.value.map(e => ({
 
 // Tag 样式优化
 .answer-tag {
-  background: #07c05f1a;
-  color: #07c05f;
-  border-color: #07c05f33;
+  background: #0052d91a;
+  color: #0052d9;
+  border-color: #0052d933;
 }
 
 .question-tag {
@@ -5892,7 +5892,7 @@ watch(() => entries.value.map(e => ({
   }
 
   .t-slider__track {
-    background: #07C05F;
+    background: #0052d9;
     height: 4px;
     border-radius: 2px;
   }
@@ -5900,7 +5900,7 @@ watch(() => entries.value.map(e => ({
   .t-slider__button {
     width: 16px;
     height: 16px;
-    border: 2px solid #07C05F;
+    border: 2px solid #0052d9;
     background: #ffffff;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 
@@ -5967,7 +5967,7 @@ watch(() => entries.value.map(e => ({
   justify-content: flex-start;
 
   .t-icon {
-    color: #07C05F;
+    color: #0052d9;
   }
 }
 
@@ -6005,7 +6005,7 @@ watch(() => entries.value.map(e => ({
   position: relative;
 
   &:hover {
-    border-color: #07C05F;
+    border-color: #0052d9;
     box-shadow: 0 2px 8px rgba(7, 192, 95, 0.12);
   }
 }
@@ -6066,7 +6066,7 @@ watch(() => entries.value.map(e => ({
 
   .result-index {
     flex-shrink: 0;
-    color: #07C05F;
+    color: #0052d9;
     font-weight: 600;
   }
 }
@@ -6110,7 +6110,7 @@ watch(() => entries.value.map(e => ({
   cursor: pointer;
 
   &:hover {
-    color: #07C05F;
+    color: #0052d9;
   }
 }
 

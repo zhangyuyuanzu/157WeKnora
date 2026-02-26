@@ -1130,7 +1130,7 @@ const handleUploadFinishedEvent = (event: Event) => {
 }
 
 .kb-create-btn {
-  background: linear-gradient(135deg, #07c05f 0%, #00a67e 100%);
+  background: linear-gradient(135deg, #0052d9 0%, #00a67e 100%);
   border: none;
   color: #fff;
 
@@ -1174,7 +1174,7 @@ const handleUploadFinishedEvent = (event: Event) => {
   background: rgba(7, 192, 95, 0.1);
   border-radius: 4px;
   font-size: 12px;
-  color: #07c05f;
+  color: #0052d9;
   margin-left: 6px;
 }
 
@@ -1211,7 +1211,7 @@ const handleUploadFinishedEvent = (event: Event) => {
     }
 
     &.active {
-      color: #07c05f;
+      color: #0052d9;
       font-weight: 500;
 
       &::after {
@@ -1221,7 +1221,7 @@ const handleUploadFinishedEvent = (event: Event) => {
         left: 0;
         right: 0;
         height: 2px;
-        background: #07c05f;
+        background: #0052d9;
         border-radius: 1px;
       }
     }
@@ -1242,11 +1242,11 @@ const handleUploadFinishedEvent = (event: Event) => {
   background: rgba(7, 192, 95, 0.1);
   border-radius: 4px;
   font-size: 12px;
-  color: #07c05f;
+  color: #0052d9;
   font-weight: 500;
 
   .t-icon {
-    color: #07c05f;
+    color: #0052d9;
   }
 }
 
@@ -1279,7 +1279,7 @@ const handleUploadFinishedEvent = (event: Event) => {
   }
 
   .t-icon {
-    color: #07c05f;
+    color: #0052d9;
     flex-shrink: 0;
   }
 }
@@ -1303,7 +1303,7 @@ const handleUploadFinishedEvent = (event: Event) => {
   }
 
   .t-icon {
-    color: #07c05f;
+    color: #0052d9;
     flex-shrink: 0;
   }
 }
@@ -1317,7 +1317,7 @@ const handleUploadFinishedEvent = (event: Event) => {
     border-color: #e8f5ed !important;
 
     &:hover {
-      border-color: #07c05f !important;
+      border-color: #0052d9 !important;
       box-shadow: 0 4px 12px rgba(7, 192, 95, 0.12) !important;
       background: linear-gradient(135deg, #ffffff 0%, #f0fdf4 100%) !important;
     }
@@ -1404,7 +1404,7 @@ const handleUploadFinishedEvent = (event: Event) => {
 }
 
 .upload-progress-icon {
-  color: #07c05f;
+  color: #0052d9;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1451,7 +1451,7 @@ const handleUploadFinishedEvent = (event: Event) => {
 
 .progress-bar-inner {
   height: 100%;
-  background: linear-gradient(90deg, #05a04f 0%, #07c05f 100%);
+  background: linear-gradient(90deg, #05a04f 0%, #0052d9 100%);
   transition: width 0.2s ease;
 }
 
@@ -1478,7 +1478,7 @@ const handleUploadFinishedEvent = (event: Event) => {
   min-height: 160px;
 
   &:hover {
-    border-color: #07c05f;
+    border-color: #0052d9;
     box-shadow: 0 4px 12px rgba(7, 192, 95, 0.12);
   }
 
@@ -1492,7 +1492,7 @@ const handleUploadFinishedEvent = (event: Event) => {
     border-color: #e8f5ed;
 
     &:hover {
-      border-color: #07c05f;
+      border-color: #0052d9;
       background: linear-gradient(135deg, #ffffff 0%, #f0fdf4 100%);
     }
 
@@ -1743,7 +1743,7 @@ const handleUploadFinishedEvent = (event: Event) => {
 
   &.type-document {
     background: rgba(7, 192, 95, 0.08);
-    color: #059669;
+    color: #0052d9;
     width: auto;
     padding: 0 6px;
     gap: 3px;
@@ -1821,7 +1821,7 @@ const handleUploadFinishedEvent = (event: Event) => {
 
   &.role-admin {
     background: rgba(7, 192, 95, 0.1);
-    color: #059669;
+    color: #0052d9;
 
     &:hover {
       background: rgba(7, 192, 95, 0.15);
@@ -1858,17 +1858,17 @@ const handleUploadFinishedEvent = (event: Event) => {
 
 @keyframes highlightFlash {
   0% {
-    border-color: #07c05f;
+    border-color: #0052d9;
     box-shadow: 0 0 0 0 rgba(7, 192, 95, 0.4);
     transform: scale(1);
   }
   50% {
-    border-color: #07c05f;
+    border-color: #0052d9;
     box-shadow: 0 0 0 8px rgba(7, 192, 95, 0);
     transform: scale(1.02);
   }
   100% {
-    border-color: #07c05f;
+    border-color: #0052d9;
     box-shadow: 0 0 0 0 rgba(7, 192, 95, 0);
     transform: scale(1);
   }
@@ -1876,7 +1876,7 @@ const handleUploadFinishedEvent = (event: Event) => {
 
 .kb-card.highlight-flash {
   animation: highlightFlash 0.6s ease-in-out 3;
-  border-color: #07c05f !important;
+  border-color: #0052d9 !important;
   box-shadow: 0 0 12px rgba(7, 192, 95, 0.3) !important;
 }
 
@@ -2100,7 +2100,7 @@ const handleUploadFinishedEvent = (event: Event) => {
   border: none;
   border-radius: 6px;
   background: transparent;
-  color: #07c05f;
+  color: #0052d9;
   font-size: 13px;
   font-family: "PingFang SC", sans-serif;
   cursor: pointer;
@@ -2270,8 +2270,8 @@ const handleUploadFinishedEvent = (event: Event) => {
   }
 
   .t-button--theme-primary {
-    background-color: #07c05f;
-    border-color: #07c05f;
+    background-color: #0052d9;
+    border-color: #0052d9;
 
     &:hover {
       background-color: #05a04f;

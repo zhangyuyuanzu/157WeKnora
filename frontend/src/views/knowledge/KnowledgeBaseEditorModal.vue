@@ -816,8 +816,8 @@ watch(
   }
 
   &.active {
-    background: #07c05f1a;
-    color: #07c05f;
+    background: #0052d91a;
+    color: #0052d9;
     font-weight: 500;
   }
 }
@@ -955,13 +955,13 @@ watch(
     // color: #00000099;
 
     &:hover:not(.t-is-disabled) {
-      border-color: #07c05f;
-      color: #07c05f;
+      border-color: #0052d9;
+      color: #0052d9;
     }
 
     &.t-is-checked {
-      background: #07c05f;
-      border-color: #07c05f;
+      background: #0052d9;
+      border-color: #0052d9;
       color: #fff;
 
       &:hover:not(.t-is-disabled) {

@@ -206,11 +206,11 @@ onMounted(() => {
   }
   :deep(.t-button .t-icon),
   :deep(.t-button .btn-icon-wrapper) {
-    color: #07c05f;
+    color: #0052d9;
   }
   :deep(.t-button:hover .t-icon),
   :deep(.t-button:hover .btn-icon-wrapper) {
-    color: #07c05f;
+    color: #0052d9;
   }
   :deep(.t-button .t-icon + .t-button__text:not(:empty)) {
     margin-left: 0;
@@ -309,11 +309,11 @@ onMounted(() => {
 
   &.active {
     background: #e6f7ec;
-    color: #07c05f;
+    color: #0052d9;
     font-weight: 500;
 
     .item-icon {
-      color: #07c05f;
+      color: #0052d9;
     }
 
     .item-label {
@@ -322,7 +322,7 @@ onMounted(() => {
 
     .item-count {
       background: #b8f0d3;
-      color: #07c05f;
+      color: #0052d9;
       font-weight: 600;
     }
 

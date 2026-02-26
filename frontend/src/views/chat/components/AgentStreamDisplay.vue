@@ -1706,20 +1706,20 @@ const handleAddToKnowledge = (answerEvent: any) => {
   }
   
   &:has(.answer-event)::after {
-    border-color: #07c05f;
-    background: #07c05f;
+    border-color: #0052d9;
+    background: #0052d9;
     box-shadow: 0 0 0 2px rgba(7, 192, 95, 0.12), 0 2px 4px rgba(7, 192, 95, 0.2);
     transform: scale(1.1);
   }
   
   &:has(.tool-event)::after {
-    border-color: #07c05f;
+    border-color: #0052d9;
     background: #ffffff;
     box-shadow: 0 1px 3px rgba(7, 192, 95, 0.15);
   }
   
   &:has(.tool-event .action-pending)::after {
-    border-color: #07c05f;
+    border-color: #0052d9;
     background: rgba(7, 192, 95, 0.15);
     box-shadow: 0 0 0 2px rgba(7, 192, 95, 0.1);
     animation: pulseNode 2s ease-in-out infinite;
@@ -1732,8 +1732,8 @@ const handleAddToKnowledge = (answerEvent: any) => {
   }
   
   &:has(.plan-task-change-event)::after {
-    border-color: #07c05f;
-    background: #07c05f;
+    border-color: #0052d9;
+    background: #0052d9;
     transform: rotate(45deg) scale(0.9);
     border-radius: 2px;
     box-shadow: 0 1px 3px rgba(7, 192, 95, 0.2);
@@ -1821,7 +1821,7 @@ const handleAddToKnowledge = (answerEvent: any) => {
       font-size: 13px;
       
       :deep(strong) {
-        color: #07c05f;
+        color: #0052d9;
         font-weight: 600;
       }
     }
@@ -1830,7 +1830,7 @@ const handleAddToKnowledge = (answerEvent: any) => {
   .intermediate-steps-show-icon {
     font-size: 13px;
     padding: 0 2px 1px 2px;
-    color: #07c05f;
+    color: #0052d9;
   }
 }
 
@@ -1848,7 +1848,7 @@ const handleAddToKnowledge = (answerEvent: any) => {
     transition: all 0.2s ease;
     
     &.thinking-last {
-      border-color: #07c05f;
+      border-color: #0052d9;
       box-shadow: 0 1px 3px rgba(7, 192, 95, 0.06);
       
       // 最后一个 Thinking 作为最终答案时，字体应该更大
@@ -1904,7 +1904,7 @@ const handleAddToKnowledge = (answerEvent: any) => {
       }
       
       :deep(blockquote) {
-        border-left: 2px solid #07c05f;
+        border-left: 2px solid #0052d9;
         padding-left: 10px;
         margin: 6px 0;
         color: #6b7280;
@@ -1917,7 +1917,7 @@ const handleAddToKnowledge = (answerEvent: any) => {
       }
       
       :deep(a) {
-        color: #07c05f;
+        color: #0052d9;
         text-decoration: none;
         
         &:hover {
@@ -1973,7 +1973,7 @@ const handleAddToKnowledge = (answerEvent: any) => {
     background: #ffffff;
     border-radius: 6px;
     padding: 8px 12px;
-    border: 1px solid #07c05f;
+    border: 1px solid #0052d9;
     box-shadow: 0 1px 3px rgba(7, 192, 95, 0.06);
     transition: all 0.2s ease;
     
@@ -1982,7 +1982,7 @@ const handleAddToKnowledge = (answerEvent: any) => {
     }
     
     &.answer-done {
-      border-color: #07c05f;
+      border-color: #0052d9;
     }
   }
   
@@ -2038,7 +2038,7 @@ const handleAddToKnowledge = (answerEvent: any) => {
       }
       
       :deep(blockquote) {
-        border-left: 2px solid #07c05f;
+        border-left: 2px solid #0052d9;
         padding-left: 10px;
         margin: 6px 0;
         color: #6b7280;
@@ -2051,7 +2051,7 @@ const handleAddToKnowledge = (answerEvent: any) => {
       }
       
       :deep(a) {
-        color: #07c05f;
+        color: #0052d9;
         text-decoration: none;
         
         &:hover {
@@ -2162,10 +2162,10 @@ const handleAddToKnowledge = (answerEvent: any) => {
       &:hover:not(:disabled) {
         background: rgba(7, 192, 95, 0.08);
         border-color: rgba(7, 192, 95, 0.3);
-        color: #07c05f;
+        color: #0052d9;
         
         .t-icon {
-          color: #07c05f;
+          color: #0052d9;
         }
       }
       
@@ -2198,7 +2198,7 @@ const handleAddToKnowledge = (answerEvent: any) => {
     }
 
     &:hover {
-      border-color: #07c05f;
+      border-color: #0052d9;
       box-shadow: 0 1px 4px rgba(7, 192, 95, 0.08);
     }
 
@@ -2262,7 +2262,7 @@ const handleAddToKnowledge = (answerEvent: any) => {
         padding: 2px 5px;
         border-radius: 3px;
         font-size: 11px;
-        color: #07c05f;
+        color: #0052d9;
         font-weight: 500;
       }
       
@@ -2308,14 +2308,14 @@ const handleAddToKnowledge = (answerEvent: any) => {
   .action-title-icon {
     width: 14px;
     height: 14px;
-    color: #07c05f;
+    color: #0052d9;
     fill: currentColor;
     flex-shrink: 0;
     
     :deep(svg) {
       width: 14px;
       height: 14px;
-      color: #07c05f;
+      color: #0052d9;
       fill: currentColor;
     }
   }
@@ -2367,7 +2367,7 @@ const handleAddToKnowledge = (answerEvent: any) => {
 
 @keyframes pulseNode {
   0%, 100% {
-    border-color: #07c05f;
+    border-color: #0052d9;
     background: rgba(7, 192, 95, 0.15);
     box-shadow: 0 0 0 2px rgba(7, 192, 95, 0.1);
     transform: scale(1);
@@ -2432,7 +2432,7 @@ const handleAddToKnowledge = (answerEvent: any) => {
 
 @keyframes pulseBorder {
   0%, 100% {
-    border-left-color: #07c05f;
+    border-left-color: #0052d9;
     box-shadow: 0 1px 3px rgba(7, 192, 95, 0.06);
   }
   50% {
@@ -2480,7 +2480,7 @@ const handleAddToKnowledge = (answerEvent: any) => {
 .action-show-icon {
   font-size: 13px;
   padding: 0 2px 1px 2px;
-  color: #07c05f;
+  color: #0052d9;
 }
 
 .action-details {
@@ -2507,7 +2507,7 @@ const handleAddToKnowledge = (answerEvent: any) => {
     line-height: 1.5;
     
     :deep(strong) {
-      color: #07c05f;
+      color: #0052d9;
       font-weight: 600;
     }
   }
@@ -2533,7 +2533,7 @@ const handleAddToKnowledge = (answerEvent: any) => {
       flex-shrink: 0;
       
       &.in-progress {
-        color: #07C05F;
+        color: #0052d9;
       }
       
       &.pending {
@@ -2541,7 +2541,7 @@ const handleAddToKnowledge = (answerEvent: any) => {
       }
       
       &.completed {
-        color: #07C05F;
+        color: #0052d9;
       }
     }
     
@@ -2580,7 +2580,7 @@ const handleAddToKnowledge = (answerEvent: any) => {
     
     .plan-task-change-content {
       strong {
-        color: #07c05f;
+        color: #0052d9;
         font-weight: 600;
         margin-right: 3px;
       }
@@ -2708,7 +2708,7 @@ const handleAddToKnowledge = (answerEvent: any) => {
     }
     
     :deep(blockquote) {
-      border-left: 3px solid #07c05f;
+      border-left: 3px solid #0052d9;
       margin: 6px 0;
       color: #666;
       background: rgba(7, 192, 95, 0.05);
@@ -2727,7 +2727,7 @@ const handleAddToKnowledge = (answerEvent: any) => {
     }
     
     :deep(a) {
-      color: #07c05f;
+      color: #0052d9;
       text-decoration: none;
       
       &:hover {
@@ -2845,7 +2845,7 @@ const handleAddToKnowledge = (answerEvent: any) => {
 
 .kb-float-popup .tip-title {
   font-weight: 600;
-  color: #07C05F;
+  color: #0052d9;
 }
 
 .kb-float-popup .tip-url {
@@ -2963,7 +2963,7 @@ const handleAddToKnowledge = (answerEvent: any) => {
       width: 8px;
       height: 8px;
       border-radius: 50%;
-      background: #07c05f;
+      background: #0052d9;
       animation: dotBounce 1.4s ease-in-out infinite;
       
       &:nth-child(1) {
@@ -2990,7 +2990,7 @@ const handleAddToKnowledge = (answerEvent: any) => {
       width: 6px;
       height: 6px;
       border-radius: 50%;
-      background: #07c05f;
+      background: #0052d9;
       animation: typingBounce 1.4s ease-in-out infinite;
       
       &:nth-child(1) {
@@ -3016,7 +3016,7 @@ const handleAddToKnowledge = (answerEvent: any) => {
     span {
       width: 3px;
       height: 16px;
-      background: #07c05f;
+      background: #0052d9;
       border-radius: 2px;
       animation: wave 1.2s ease-in-out infinite;
       

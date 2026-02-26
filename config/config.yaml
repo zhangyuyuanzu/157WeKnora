@@ -581,4 +581,4 @@ extract:
 # 租户配置
 tenant:
   # 是否启用跨租户访问功能（内网环境可开启）
-  enable_cross_tenant_access: false
+  enable_cross_tenant_access: true

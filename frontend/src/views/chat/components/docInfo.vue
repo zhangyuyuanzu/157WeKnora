@@ -131,7 +131,7 @@ const getWebSearchDisplayText = (item) => {
             img {
                 width: 16px;
                 height: 16px;
-                color: #07c05f;
+                color: #0052d9;
                 fill: currentColor;
                 margin-right: 8px;
             }
@@ -145,7 +145,7 @@ const getWebSearchDisplayText = (item) => {
         .refer_show_icon {
             font-size: 14px;
             padding: 0 2px 1px 2px;
-            color: #07c05f;
+            color: #0052d9;
         }
     }
 
@@ -168,13 +168,13 @@ const getWebSearchDisplayText = (item) => {
     color: #000000e6;
     line-height: 23px;
     text-align: justify;
-    border: 1px solid #07c05f33;
+    border: 1px solid #0052d933;
     padding: 8px;
 }
 
 .doc {
     text-decoration: none;
-    color: #07c05f;
+    color: #0052d9;
     cursor: pointer;
     display: inline-block;
     white-space: nowrap;
@@ -187,7 +187,7 @@ const getWebSearchDisplayText = (item) => {
     border-bottom: 1px solid transparent;
     
     &:hover {
-        border-bottom-color: #07c05f;
+        border-bottom-color: #0052d9;
     }
     
     &.doc-web {

@@ -160,7 +160,7 @@ const safeProcessThinkContent = (content) => {
         .toggle-icon-wrapper {
             font-size: 14px;
             padding: 0 2px 1px 2px;
-            color: #07c05f;
+            color: #0052d9;
             
             .toggle-icon {
                 transition: transform 0.2s;

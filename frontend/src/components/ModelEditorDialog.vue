@@ -1158,7 +1158,7 @@ const handleCancel = () => {
   &.t-is-focused .t-input__wrap,
   &.t-is-focused input,
   &.t-is-focused textarea {
-    border-color: #07C05F;
+    border-color: #0052d9;
     box-shadow: 0 0 0 2px rgba(7, 192, 95, 0.1);
   }
 }
@@ -1193,7 +1193,7 @@ const handleCancel = () => {
 
     &:hover {
       .t-radio__label {
-        color: #07C05F;
+        color: #0052d9;
       }
     }
   }
@@ -1205,7 +1205,7 @@ const handleCancel = () => {
   }
 
   .t-radio__input:checked + .t-radio__label {
-    color: #07C05F;
+    color: #0052d9;
     font-weight: 500;
   }
 }
@@ -1239,8 +1239,8 @@ const handleCancel = () => {
     transition: all 0.15s ease;
 
     &.t-button--theme-primary {
-      background: #07C05F;
-      border-color: #07C05F;
+      background: #0052d9;
+      border-color: #0052d9;
 
       &:hover {
         background: #06b04d;
@@ -1258,8 +1258,8 @@ const handleCancel = () => {
       border-color: #d9d9d9;
 
       &:hover {
-        border-color: #07C05F;
-        color: #07C05F;
+        border-color: #0052d9;
+        color: #0052d9;
         background: rgba(7, 192, 95, 0.04);
       }
     }
@@ -1298,7 +1298,7 @@ const handleCancel = () => {
     flex: 1;
 
     &.success {
-      color: #059669;
+      color: #0052d9;
     }
 
     &.error {
@@ -1319,7 +1319,7 @@ const handleCancel = () => {
     flex-shrink: 0;
 
     &.available {
-      color: #07C05F;
+      color: #0052d9;
     }
 
     &.unavailable {
@@ -1338,13 +1338,13 @@ const handleCancel = () => {
   
   .downloaded-icon {
     font-size: 14px;
-    color: #07C05F;
+    color: #0052d9;
     flex-shrink: 0;
   }
   
   .download-icon {
     font-size: 14px;
-    color: #07C05F;
+    color: #0052d9;
     flex-shrink: 0;
   }
   
@@ -1362,7 +1362,7 @@ const handleCancel = () => {
   
   &.download {
     .model-name {
-      color: #07C05F;
+      color: #0052d9;
       font-weight: 500;
     }
   }
@@ -1378,13 +1378,13 @@ const handleCancel = () => {
   .spinning {
     animation: spin 1s linear infinite;
     font-size: 14px;
-    color: #07C05F;
+    color: #0052d9;
   }
   
   .progress-text {
     font-size: 12px;
     font-weight: 500;
-    color: #07C05F;
+    color: #0052d9;
   }
 }
 
@@ -1440,7 +1440,7 @@ const handleCancel = () => {
   flex-shrink: 0;
 
   &:hover {
-    color: #07C05F;
+    color: #0052d9;
     background: rgba(7, 192, 95, 0.04);
   }
 }
@@ -1473,7 +1473,7 @@ const handleCancel = () => {
   color: #e34d59;
 
   &.success {
-    color: #07C05F;
+    color: #0052d9;
   }
 }
 
@@ -1496,7 +1496,7 @@ const handleCancel = () => {
     margin-right: 2px;
 
     &.info {
-      color: #07C05F;
+      color: #0052d9;
     }
   }
 
@@ -1510,7 +1510,7 @@ const handleCancel = () => {
   &.rerank-tip {
     background: #f0fdf6;
     border: 1px solid #d1fae5;
-    border-left: 3px solid #07C05F;
+    border-left: 3px solid #0052d9;
 
     .tip-text {
       color: #166534;
@@ -1518,7 +1518,7 @@ const handleCancel = () => {
   }
 
   :deep(.tip-link) {
-    color: #07C05F;
+    color: #0052d9;
     font-size: 13px;
     font-weight: 500;
     padding: 4px 6px 4px 10px !important;

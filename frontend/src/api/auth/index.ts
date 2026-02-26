@@ -236,6 +236,24 @@ export async function validateToken(): Promise<{ success: boolean; valid?: boole
   }
 }
 
+/**
+ * 修改密码
+ */
+export async function changePassword(oldPassword: string, newPassword: string): Promise<{ success: boolean; message?: string }> {
+  try {
+    const response = await post('/api/v1/auth/change-password', {
+      old_password: oldPassword,
+      new_password: newPassword
+    })
+    return response as unknown as { success: boolean; message?: string }
+  } catch (error: any) {
+    return {
+      success: false,
+      message: error.message || '修改密码失败'
+    }
+  }
+}
+
 
 
 

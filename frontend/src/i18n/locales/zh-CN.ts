@@ -697,6 +697,13 @@ export default {
     loginError: "登录错误，请检查邮箱或密码",
     loginErrorRetry: "登录错误，请稍后重试",
     registerError: "注册错误，请稍后重试",
+    changePassword: "修改密码",
+    oldPassword: "旧密码",
+    newPassword: "新密码",
+    oldPasswordPlaceholder: "请输入当前密码",
+    newPasswordPlaceholder: "请输入新密码（8-32个字符）",
+    oldPasswordRequired: "请输入旧密码",
+    changePasswordSuccess: "密码修改成功",
     forgotPasswordNotAvailable: "密码找回功能暂不可用，请联系管理员",
   },
   authStore: {
@@ -1596,6 +1603,7 @@ export default {
       faq: "FAQ 设置",
       graph: "知识图谱",
       share: "共享管理",
+      push: "知识推送",
     },
     basic: {
       title: "基本信息",
@@ -1619,6 +1627,14 @@ export default {
       unshareConfirm: "确定要取消对「{name}」的共享吗？",
       tip1: "共享后，空间成员将根据设定的权限访问此知识库",
       tip2: "可编辑权限允许成员修改知识库内容，只读权限仅允许检索和问答",
+    },
+    push: {
+      title: "知识推送",
+      description: "配置更新知识库内容时的推送通知",
+      enable: "启用推送",
+      targetUrl: "推送 webhook 地址",
+      targetUrlPlaceholder: "https://example.com/webhook",
+      tip: "启用后，每次更新知识库内容时，系统将向指定地址发送通知。",
     },
     messages: {
       loadModelsFailed: "加载模型列表失败",

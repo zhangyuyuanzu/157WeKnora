@@ -1887,7 +1887,7 @@ const handleConversationRerankModelChange = async (value: string) => {
   margin: 20px 0;
   background: #f0fdf6;
   border: 1px solid #d1fae5;
-  border-left: 3px solid #07C05F;
+  border-left: 3px solid #0052d9;
   border-radius: 6px;
   padding: 16px;
 
@@ -1899,14 +1899,14 @@ const handleConversationRerankModelChange = async (value: string) => {
 
     .recommendation-icon {
       font-size: 16px;
-      color: #07C05F;
+      color: #0052d9;
       flex-shrink: 0;
     }
 
     .recommendation-title {
       font-size: 14px;
       font-weight: 500;
-      color: #059669;
+      color: #0052d9;
     }
   }
 
@@ -2058,12 +2058,12 @@ const handleConversationRerankModelChange = async (value: string) => {
   
   .model-icon {
     font-size: 14px;
-    color: #07C05F;
+    color: #0052d9;
   }
   
   .add-icon {
     font-size: 14px;
-    color: #07C05F;
+    color: #0052d9;
   }
   
   .model-name {
@@ -2073,7 +2073,7 @@ const handleConversationRerankModelChange = async (value: string) => {
   
   &.add {
     .model-name {
-      color: #07C05F;
+      color: #0052d9;
       font-weight: 500;
     }
   }

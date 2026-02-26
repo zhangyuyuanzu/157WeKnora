@@ -192,11 +192,11 @@ const handleClose = () => {
 
     .status-success {
       :deep(.t-icon) {
-        color: #00a870;
+        color: #0052d9;
       }
 
       .status-text {
-        color: #00a870;
+        color: #0052d9;
       }
     }
 

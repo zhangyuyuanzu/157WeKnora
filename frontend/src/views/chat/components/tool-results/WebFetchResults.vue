@@ -208,7 +208,7 @@ const indexKey = (index: number, item: WebFetchResultItem): string => {
   transition: color 0.15s ease;
 
   &:hover {
-    color: #07c05f;
+    color: #0052d9;
     text-decoration: underline;
   }
 }
@@ -241,7 +241,7 @@ const indexKey = (index: number, item: WebFetchResultItem): string => {
 }
 
 .info-field .field-value a {
-  color: #07c05f;
+  color: #0052d9;
   text-decoration: none;
 
   &:hover {

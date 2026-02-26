@@ -726,7 +726,7 @@ const handleDetailsScroll = () => {
   margin-left: 18px;
   display: flex;
   overflow: hidden;
-  color: #07c05f;
+  color: #0052d9;
 
   .download_box {
     width: 16px;
@@ -748,12 +748,12 @@ const handleDetailsScroll = () => {
     display: flex;
     align-items: center;
     gap: 8px;
-    color: #059669;
+    color: #0052d9;
     text-decoration: none;
     transition: all 0.2s ease;
     
     &:hover {
-      color: #07c05f;
+      color: #0052d9;
       background: #e6f7ed;
       border-radius: 3px;
       padding: 4px 6px;
@@ -773,7 +773,7 @@ const handleDetailsScroll = () => {
     .jump-icon {
       transition: transform 0.2s ease;
       flex-shrink: 0;
-      color: #059669;
+      color: #0052d9;
     }
   }
 }
@@ -821,9 +821,9 @@ const handleDetailsScroll = () => {
   }
 
   .chunk-count {
-    color: #07c05f;
+    color: #0052d9;
     font-size: 12px;
-    background: #07c05f14;
+    background: #0052d914;
     padding: 4px 8px;
     border-radius: 12px;
   }
@@ -878,11 +878,11 @@ const handleDetailsScroll = () => {
   }
   
   &.chunk-odd {
-    background: #07c05f0d;
+    background: #0052d90d;
   }
   
   &:hover {
-    border-color: #07c05f;
+    border-color: #0052d9;
     box-shadow: 0 2px 8px rgba(7, 192, 95, 0.1);
   }
 }
@@ -926,14 +926,14 @@ const handleDetailsScroll = () => {
   align-items: center;
   gap: 6px;
   cursor: pointer;
-  color: #059669;
+  color: #0052d9;
   font-size: 12px;
   font-weight: 500;
   padding: 4px 0;
   transition: color 0.2s ease;
   
   &:hover {
-    color: #07c05f;
+    color: #0052d9;
   }
 }
 
@@ -964,7 +964,7 @@ const handleDetailsScroll = () => {
   }
   
   .question-icon {
-    color: #059669;
+    color: #0052d9;
     flex-shrink: 0;
     margin-top: 2px;
   }

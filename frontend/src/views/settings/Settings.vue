@@ -378,7 +378,7 @@ onUnmounted(() => {
 
   &.active {
     background-color: rgba(7, 192, 95, 0.1);
-    color: #07C05F;
+    color: #0052d9;
     font-weight: 500;
   }
 }
@@ -427,7 +427,7 @@ onUnmounted(() => {
 
   &.active {
     background-color: rgba(7, 192, 95, 0.08);
-    color: #07C05F;
+    color: #0052d9;
     font-weight: 500;
   }
 }

@@ -874,19 +874,19 @@ onBeforeUnmount(() => {
 
 .toolbar-btn:hover {
   background: rgba(7, 192, 95, 0.08);
-  color: #07c05f;
+  color: #0052d9;
   
   .t-icon {
-    color: #07c05f;
+    color: #0052d9;
   }
 }
 
 .toolbar-btn.active {
   background: rgba(7, 192, 95, 0.12);
-  color: #07c05f;
+  color: #0052d9;
   
   .t-icon {
-    color: #07c05f;
+    color: #0052d9;
   }
 }
 
@@ -949,11 +949,11 @@ onBeforeUnmount(() => {
 :deep(.toggle-view-btn.active),
 :deep(.toggle-view-btn:hover) {
   background: rgba(7, 192, 95, 0.12) !important;
-  color: #059669 !important;
+  color: #0052d9 !important;
   border-color: rgba(7, 192, 95, 0.4) !important;
   
   .t-icon {
-    color: #059669;
+    color: #0052d9;
   }
 }
 
@@ -1011,7 +1011,7 @@ onBeforeUnmount(() => {
   }
 
   :deep(blockquote) {
-    border-left: 4px solid #07c05f;
+    border-left: 4px solid #0052d9;
     padding-left: 12px;
     color: #555;
     margin: 16px 0;
@@ -1019,7 +1019,7 @@ onBeforeUnmount(() => {
   }
 
   :deep(a) {
-    color: #07c05f;
+    color: #0052d9;
   }
 }
 

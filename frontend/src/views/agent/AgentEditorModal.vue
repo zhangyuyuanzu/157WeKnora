@@ -2707,8 +2707,8 @@ const handleSave = async () => {
   }
 
   &.active {
-    background: #07c05f1a;
-    color: #07c05f;
+    background: #0052d91a;
+    color: #0052d9;
     font-weight: 500;
   }
 }
@@ -2887,7 +2887,7 @@ const handleSave = async () => {
   background: #f0faf5;
   border-radius: 6px;
   border: 1px solid #d4f0e2;
-  color: #07c05f;
+  color: #0052d9;
   font-size: 13px;
   line-height: 1.5;
 }
@@ -2954,13 +2954,13 @@ const handleSave = async () => {
     border-color: #d9d9d9;
 
     &:hover:not(.t-is-disabled) {
-      border-color: #07c05f;
-      color: #07c05f;
+      border-color: #0052d9;
+      color: #0052d9;
     }
 
     &.t-is-checked {
-      background: #07c05f;
-      border-color: #07c05f;
+      background: #0052d9;
+      border-color: #0052d9;
       color: #fff;
 
       &:hover:not(.t-is-disabled) {
@@ -3005,7 +3005,7 @@ const handleSave = async () => {
   transition: all 0.2s ease;
 
   &:hover {
-    border-color: #07c05f;
+    border-color: #0052d9;
     background: #f0faf5;
   }
 
@@ -3068,7 +3068,7 @@ const handleSave = async () => {
   transition: all 0.2s ease;
 
   &:hover {
-    border-color: #07c05f;
+    border-color: #0052d9;
     background: #f0faf5;
   }
 
@@ -3144,14 +3144,14 @@ const handleSave = async () => {
 :deep(.t-checkbox) {
   &.t-is-checked {
     .t-checkbox__input {
-      border-color: #07c05f;
-      background-color: #07c05f;
+      border-color: #0052d9;
+      background-color: #0052d9;
     }
   }
   
   &:hover:not(.t-is-disabled) {
     .t-checkbox__input {
-      border-color: #07c05f;
+      border-color: #0052d9;
     }
   }
 }
@@ -3159,7 +3159,7 @@ const handleSave = async () => {
 // Switch 样式
 :deep(.t-switch) {
   &.t-is-checked {
-    background-color: #07c05f;
+    background-color: #0052d9;
     
     &:hover:not(.t-is-disabled) {
       background-color: #05a04f;
@@ -3170,18 +3170,18 @@ const handleSave = async () => {
 // Slider 样式
 :deep(.t-slider) {
   .t-slider__track {
-    background-color: #07c05f;
+    background-color: #0052d9;
   }
   
   .t-slider__button {
-    border-color: #07c05f;
+    border-color: #0052d9;
   }
 }
 
 // Button 主题样式
 :deep(.t-button--theme-primary) {
-  background-color: #07c05f;
-  border-color: #07c05f;
+  background-color: #0052d9;
+  border-color: #0052d9;
   
   &:hover:not(.t-is-disabled) {
     background-color: #05a04f;
@@ -3195,7 +3195,7 @@ const handleSave = async () => {
 :deep(.t-select) {
   &.t-is-focused,
   &:focus-within {
-    border-color: #07c05f;
+    border-color: #0052d9;
     box-shadow: 0 0 0 2px rgba(7, 192, 95, 0.1);
   }
 }
@@ -3357,7 +3357,7 @@ const handleSave = async () => {
   
   &.normal {
     background: linear-gradient(135deg, rgba(7, 192, 95, 0.15) 0%, rgba(7, 192, 95, 0.08) 100%);
-    color: #059669;
+    color: #0052d9;
   }
   
   &.agent {

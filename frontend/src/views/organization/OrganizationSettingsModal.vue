@@ -1541,7 +1541,7 @@ watch(currentSection, (section) => {
 </script>
 
 <style scoped lang="less">
-@primary-color: #07c05f;
+@primary-color: #0052d9;
 @primary-light: rgba(7, 192, 95, 0.1);
 @primary-lighter: #e5e5e5;
 @primary-hover: #05a04f;
@@ -1893,11 +1893,11 @@ watch(currentSection, (section) => {
   transition: border-color 0.2s ease, background 0.2s ease;
 }
 .avatar-popover-content .avatar-emoji-btn:hover {
-  border-color: #07c05f;
+  border-color: #0052d9;
   background: rgba(7, 192, 95, 0.06);
 }
 .avatar-popover-content .avatar-emoji-btn.is-selected {
-  border-color: #07c05f;
+  border-color: #0052d9;
   background: rgba(7, 192, 95, 0.12);
 }
 .avatar-popover-content .avatar-clear-btn {
@@ -1906,7 +1906,7 @@ watch(currentSection, (section) => {
   font-size: 12px;
 }
 .avatar-popover-content .avatar-clear-btn:hover {
-  color: #059669;
+  color: #0052d9;
 }
 
 // 邀请卡片样式
@@ -2334,7 +2334,7 @@ watch(currentSection, (section) => {
   padding: 48px 20px;
 
   .empty-icon {
-    color: #07c05f;
+    color: #0052d9;
     margin-bottom: 16px;
   }
 
@@ -2379,7 +2379,7 @@ watch(currentSection, (section) => {
       height: 36px;
       border-radius: 50%;
       background: rgba(7, 192, 95, 0.1);
-      color: #07c05f;
+      color: #0052d9;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -2492,7 +2492,7 @@ watch(currentSection, (section) => {
 
       &.type-document {
         background: rgba(7, 192, 95, 0.08);
-        color: #059669;
+        color: #0052d9;
       }
 
       &.type-faq {
@@ -2502,7 +2502,7 @@ watch(currentSection, (section) => {
 
       &      .shared-icon-org {
         background: rgba(7, 192, 95, 0.08);
-        color: #059669;
+        color: #0052d9;
       }
 
       &.shared-icon-agent-wrap {
@@ -2513,7 +2513,7 @@ watch(currentSection, (section) => {
 
       &.shared-icon-kb {
         background: rgba(7, 192, 95, 0.08);
-        color: #059669;
+        color: #0052d9;
       }
 
       .shared-icon-kb-img {

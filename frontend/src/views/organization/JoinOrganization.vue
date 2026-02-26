@@ -92,7 +92,7 @@ const goToOrganizations = () => {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #00a870;
+  color: #0052d9;
 }
 
 .join-title {
@@ -112,7 +112,7 @@ const goToOrganizations = () => {
   }
   
   &.success {
-    color: #00a870;
+    color: #0052d9;
   }
 }
 </style>

@@ -240,7 +240,7 @@ const formatDate = (dateStr: string): string => {
   transition: color 0.15s ease;
   
   &:hover {
-    color: #07c05f;
+    color: #0052d9;
     
     .result-title {
       text-decoration: underline;

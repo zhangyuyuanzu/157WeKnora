@@ -1,7 +1,7 @@
 <template>
     <div class="aside_box">
         <div class="logo_box" @click="router.push('/platform/knowledge-bases')" style="cursor: pointer;">
-            <img class="logo" src="@/assets/img/weknora.png" alt="">
+            <img class="logo" src="@/assets/img/山南logo-透明底-正方形.png" alt="">
         </div>
         
         <!-- 租户选择器：仅在用户可切换租户时显示 -->
@@ -617,7 +617,7 @@ const mouseleaveMenu = (path: string) => {
 
     .upload-file-wrap:hover {
         background-color: #dbede4;
-        color: #07C05F;
+        color: #0052d9;
 
     }
 
@@ -628,20 +628,20 @@ const mouseleaveMenu = (path: string) => {
     }
 
     .active-upload {
-        color: #07C05F;
+        color: #0052d9;
     }
 
     .menu_item_active {
         border-radius: 4px;
-        background: #07c05f1a !important;
+        background: #0052d91a !important;
 
         .menu_icon,
         .menu_title {
-            color: #07c05f !important;
+            color: #0052d9 !important;
         }
 
         .menu-create-hint {
-            color: #07c05f !important;
+            color: #0052d9 !important;
             opacity: 1;
         }
     }
@@ -774,7 +774,7 @@ const mouseleaveMenu = (path: string) => {
         .menu-more {
             display: inline-block;
             font-weight: bold;
-            color: #07C05F;
+            color: #0052d9;
         }
 
         .sub_title {
@@ -802,12 +802,12 @@ const mouseleaveMenu = (path: string) => {
     }
 
     .submenu_item_active {
-        background: #07c05f1a !important;
-        color: #07c05f !important;
+        background: #0052d91a !important;
+        color: #0052d9 !important;
         border-radius: 3px;
 
         .menu-more {
-            color: #07c05f !important;
+            color: #0052d9 !important;
         }
 
         .menu-more-wrap {
@@ -837,11 +837,11 @@ const mouseleaveMenu = (path: string) => {
     }
     
     &:hover {
-        color: #07c05f;
+        color: #0052d9;
     }
     
     &.active {
-        color: #07c05f;
+        color: #0052d9;
     }
     
     &.active:hover {
@@ -881,8 +881,8 @@ const mouseleaveMenu = (path: string) => {
     }
     
     &.active {
-        background-color: #07c05f1a;
-        color: #07c05f;
+        background-color: #0052d91a;
+        color: #0052d9;
         font-weight: 500;
     }
     
@@ -906,7 +906,7 @@ const mouseleaveMenu = (path: string) => {
     margin-left: auto;
     margin-right: 8px;
     font-size: 16px;
-    color: #07c05f;
+    color: #0052d9;
     opacity: 0.7;
     transition: opacity 0.2s ease;
     flex-shrink: 0;
@@ -963,7 +963,7 @@ const mouseleaveMenu = (path: string) => {
 
             &:hover {
                 background: #f5f7fa !important;
-                color: #07c05f !important;
+                color: #0052d9 !important;
             }
 
             .t-dropdown__item-text {

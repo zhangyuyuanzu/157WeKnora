@@ -603,7 +603,7 @@ onMounted(() => {
   overflow: visible;
 
   &:hover {
-    border-color: #07C05F;
+    border-color: #0052d9;
     background: #f9fdfb;
     box-shadow: 0 1px 4px rgba(7, 192, 95, 0.08);
   }
@@ -716,7 +716,7 @@ onMounted(() => {
   .info-box {
     background: #f0fdf6;
     border: 1px solid #d1fae5;
-    border-left: 3px solid #07C05F;
+    border-left: 3px solid #0052d9;
     border-radius: 6px;
     padding: 16px;
   }
@@ -729,14 +729,14 @@ onMounted(() => {
 
     .info-icon {
       font-size: 16px;
-      color: #07C05F;
+      color: #0052d9;
       flex-shrink: 0;
     }
 
     .info-title {
       font-size: 14px;
       font-weight: 500;
-      color: #059669;
+      color: #0052d9;
     }
   }
 
@@ -760,18 +760,18 @@ onMounted(() => {
 
         .link-icon {
           font-size: 13px;
-          color: #07C05F;
+          color: #0052d9;
           flex-shrink: 0;
         }
 
         a {
-          color: #07C05F;
+          color: #0052d9;
           text-decoration: none;
           font-weight: 500;
           transition: color 0.15s;
 
           &:hover {
-            color: #059669;
+            color: #0052d9;
             text-decoration: underline;
           }
         }
@@ -809,8 +809,8 @@ onMounted(() => {
       border-color: #d9d9d9;
 
       &:hover {
-        color: #07C05F;
-        border-color: #07C05F;
+        color: #0052d9;
+        border-color: #0052d9;
         background: rgba(7, 192, 95, 0.04);
       }
     }
@@ -832,7 +832,7 @@ onMounted(() => {
 
   &.t-tag--theme-success {
     background: #dcfce7;
-    color: #059669;
+    color: #0052d9;
   }
 
   &.t-size-s {
@@ -863,7 +863,7 @@ onMounted(() => {
 
     &:hover {
       background: #f5f7fa;
-      color: #07C05F;
+      color: #0052d9;
     }
 
     &:active {

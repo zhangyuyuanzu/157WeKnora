@@ -1254,27 +1254,27 @@ onUnmounted(() => {
 
 .org-join-btn {
   border-color: rgba(7, 192, 95, 0.5);
-  color: #07c05f;
+  color: #0052d9;
   font-weight: 500;
   transition: all 0.2s ease;
 
   .t-icon {
-    color: #07c05f;
+    color: #0052d9;
   }
 
   &:hover {
     background: rgba(7, 192, 95, 0.08);
-    border-color: #07c05f;
-    color: #07c05f;
+    border-color: #0052d9;
+    color: #0052d9;
 
     .t-icon {
-      color: #07c05f;
+      color: #0052d9;
     }
   }
 }
 
 .org-create-btn {
-  background: #07c05f;
+  background: #0052d9;
   border: none;
   color: #fff;
   font-weight: 500;
@@ -1326,7 +1326,7 @@ onUnmounted(() => {
     }
 
     &.active {
-      color: #07c05f;
+      color: #0052d9;
       font-weight: 500;
 
       &::after {
@@ -1336,7 +1336,7 @@ onUnmounted(() => {
         left: 0;
         right: 0;
         height: 2px;
-        background: #07c05f;
+        background: #0052d9;
         border-radius: 1px;
       }
     }
@@ -1614,8 +1614,8 @@ onUnmounted(() => {
 
   &.stat-kb {
     background: rgba(7, 192, 95, 0.08);
-    color: #07c05f;
-    .t-icon { color: #07c05f; }
+    color: #0052d9;
+    .t-icon { color: #0052d9; }
     &:hover { background: rgba(7, 192, 95, 0.12); }
   }
 
@@ -1680,14 +1680,14 @@ onUnmounted(() => {
 
   &.admin {
     background: rgba(7, 192, 95, 0.12);
-    color: #07c05f;
-    .t-icon { color: #07c05f; }
+    color: #0052d9;
+    .t-icon { color: #0052d9; }
   }
 
   &.editor {
     background: rgba(7, 192, 95, 0.08);
-    color: #07c05f;
-    .t-icon { color: #07c05f; }
+    color: #0052d9;
+    .t-icon { color: #0052d9; }
   }
 
   &.viewer {
@@ -1983,7 +1983,7 @@ onUnmounted(() => {
 
   &:hover {
     background: #f1f5f9;
-    color: #07c05f;
+    color: #0052d9;
   }
 }
 
@@ -2062,7 +2062,7 @@ onUnmounted(() => {
     transition: background 0.2s;
 
     &:hover {
-      background: #07c05f;
+      background: #0052d9;
     }
   }
 }
@@ -2090,7 +2090,7 @@ onUnmounted(() => {
     }
 
     &.active {
-      color: #07c05f;
+      color: #0052d9;
       font-weight: 600;
 
       &::after {
@@ -2100,7 +2100,7 @@ onUnmounted(() => {
         left: 0;
         right: 0;
         height: 3px;
-        background: linear-gradient(90deg, #07c05f, #05a650);
+        background: linear-gradient(90deg, #0052d9, #05a650);
         border-radius: 2px 2px 0 0;
       }
     }
@@ -2144,7 +2144,7 @@ onUnmounted(() => {
     transition: background 0.2s;
 
     &:hover {
-      background: #07c05f;
+      background: #0052d9;
     }
   }
 }
@@ -2330,7 +2330,7 @@ onUnmounted(() => {
 
     &.member {
       background: rgba(7, 192, 95, 0.08);
-      color: #07c05f;
+      color: #0052d9;
     }
 
     &.share {
@@ -2340,7 +2340,7 @@ onUnmounted(() => {
 
     &.searchable-badge-agent {
       background: rgba(7, 192, 95, 0.08);
-      color: #07c05f;
+      color: #0052d9;
       .searchable-badge-agent-icon {
         width: 12px;
         height: 12px;
@@ -2592,7 +2592,7 @@ onUnmounted(() => {
 
   &.member {
     background: rgba(7, 192, 95, 0.08);
-    color: #07c05f;
+    color: #0052d9;
   }
 
   &.share {
@@ -2602,7 +2602,7 @@ onUnmounted(() => {
 
   &.preview-badge-agent {
     background: rgba(7, 192, 95, 0.08);
-    color: #07c05f;
+    color: #0052d9;
     .preview-badge-agent-icon {
       width: 14px;
       height: 14px;
@@ -2641,7 +2641,7 @@ onUnmounted(() => {
   font-weight: 500;
 
   &.value-success {
-    color: #07c05f;
+    color: #0052d9;
   }
 
   &.value-warning {
@@ -2672,7 +2672,7 @@ onUnmounted(() => {
     gap: 8px;
     background: #f0fdf4;
     border-color: #bbf7d0;
-    color: #07c05f;
+    color: #0052d9;
 
     .t-icon {
       flex-shrink: 0;

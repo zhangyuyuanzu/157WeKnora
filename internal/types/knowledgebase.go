@@ -67,6 +67,8 @@ type KnowledgeBase struct {
 	FAQConfig *FAQConfig `yaml:"faq_config"              json:"faq_config"              gorm:"column:faq_config;type:json"`
 	// QuestionGenerationConfig stores question generation configuration for document knowledge bases
 	QuestionGenerationConfig *QuestionGenerationConfig `yaml:"question_generation_config" json:"question_generation_config" gorm:"column:question_generation_config;type:json"`
+	// PushConfig stores push configuration
+	PushConfig *PushConfig `yaml:"push_config"             json:"push_config"             gorm:"column:push_config;type:json"`
 	// Creation time of the knowledge base
 	CreatedAt time.Time `yaml:"created_at"              json:"created_at"`
 	// Last updated time of the knowledge base
@@ -93,6 +95,8 @@ type KnowledgeBaseConfig struct {
 	ImageProcessingConfig ImageProcessingConfig `yaml:"image_processing_config" json:"image_processing_config"`
 	// FAQ configuration (only for FAQ type knowledge bases)
 	FAQConfig *FAQConfig `yaml:"faq_config"              json:"faq_config"`
+	// Push configuration
+	PushConfig *PushConfig `yaml:"push_config"             json:"push_config"`
 }
 
 // ChunkingConfig represents the document splitting configuration
@@ -346,4 +350,29 @@ func (kb *KnowledgeBase) IsMultimodalEnabled() bool {
 		return true
 	}
 	return false
+}
+
+// PushConfig represents the knowledge base push configuration
+type PushConfig struct {
+	// Whether to enable push
+	Enabled bool `yaml:"enabled" json:"enabled"`
+	// Target URL for push
+	TargetURL string `yaml:"target_url,omitempty" json:"target_url,omitempty"`
+}
+
+// Value implements the driver.Valuer interface
+func (c PushConfig) Value() (driver.Value, error) {
+	return json.Marshal(c)
+}
+
+// Scan implements the sql.Scanner interface
+func (c *PushConfig) Scan(value interface{}) error {
+	if value == nil {
+		return nil
+	}
+	b, ok := value.([]byte)
+	if !ok {
+		return nil
+	}
+	return json.Unmarshal(b, c)
 }

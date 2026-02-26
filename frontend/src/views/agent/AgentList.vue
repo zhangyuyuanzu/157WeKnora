@@ -975,7 +975,7 @@ defineExpose({
   background: rgba(7, 192, 95, 0.1);
   border-radius: 4px;
   font-size: 12px;
-  color: #07c05f;
+  color: #0052d9;
   margin-left: 6px;
 }
 
@@ -1091,9 +1091,9 @@ defineExpose({
     }
 
     &.active {
-      color: #07c05f;
+      color: #0052d9;
       font-weight: 600;
-      border-bottom: 2px solid #07c05f;
+      border-bottom: 2px solid #0052d9;
       margin-bottom: -1px;
     }
   }
@@ -1166,7 +1166,7 @@ defineExpose({
   min-height: 160px;
 
   &:hover {
-    border-color: #07c05f;
+    border-color: #0052d9;
     box-shadow: 0 4px 12px rgba(7, 192, 95, 0.12);
   }
 
@@ -1176,7 +1176,7 @@ defineExpose({
     border-color: #e8f5ed;
 
     &:hover {
-      border-color: #07c05f;
+      border-color: #0052d9;
       background: linear-gradient(135deg, #ffffff 0%, #f0fdf4 100%);
     }
 
@@ -1343,7 +1343,7 @@ defineExpose({
   
   &.normal {
     background: linear-gradient(135deg, rgba(7, 192, 95, 0.15) 0%, rgba(7, 192, 95, 0.08) 100%);
-    color: #059669;
+    color: #0052d9;
   }
   
   &.agent {
@@ -1366,7 +1366,7 @@ defineExpose({
 
   &:hover {
     background: rgba(0, 0, 0, 0.06);
-    color: #07c05f;
+    color: #0052d9;
   }
 }
 
@@ -1460,7 +1460,7 @@ defineExpose({
 
   &.mode-normal {
     background: rgba(7, 192, 95, 0.08);
-    color: #059669;
+    color: #0052d9;
 
     &:hover {
       background: rgba(7, 192, 95, 0.12);
@@ -1487,7 +1487,7 @@ defineExpose({
 
   &.knowledge {
     background: rgba(7, 192, 95, 0.08);
-    color: #059669;
+    color: #0052d9;
 
     &:hover {
       background: rgba(7, 192, 95, 0.12);

@@ -1621,7 +1621,7 @@ const showAgentNotReadyMessage = (agent: CustomAgent, reasons: string[]) => {
         e.preventDefault();
         router.push(`/platform/agents?edit=${agent.id}`);
       },
-      style: 'color: #07C05F; text-decoration: none; font-weight: 500; cursor: pointer; align-self: flex-start;',
+      style: 'color: #0052d9; text-decoration: none; font-weight: 500; cursor: pointer; align-self: flex-start;',
       onMouseenter: (e: Event) => {
         (e.target as HTMLElement).style.textDecoration = 'underline';
       },
@@ -1658,7 +1658,7 @@ const toggleWebSearch = () => {
           e.preventDefault();
           handleGoToWebSearchSettings();
         },
-        style: 'color: #07C05F; text-decoration: none; font-weight: 500; cursor: pointer; align-self: flex-start;',
+        style: 'color: #0052d9; text-decoration: none; font-weight: 500; cursor: pointer; align-self: flex-start;',
         onMouseenter: (e: Event) => {
           (e.target as HTMLElement).style.textDecoration = 'underline';
         },
@@ -2007,7 +2007,7 @@ const getImgSrc = (url: string) => {
   box-shadow: 0 6px 6px 0 rgba(0, 0, 0, 0.04), 0 12px 12px -1px rgba(0, 0, 0, 0.08);
   
   &:focus-within {
-    border-color: var(--td-brand-color, #07C05F);
+    border-color: var(--td-brand-color, #0052d9);
   }
 }
 
@@ -2123,7 +2123,7 @@ const getImgSrc = (url: string) => {
 
 .mention-chip--kb .mention-chip__icon-wrap {
   background: rgba(5, 192, 95, 0.12);
-  color: var(--td-brand-color, #07c05f);
+  color: var(--td-brand-color, #0052d9);
 }
 
 .mention-chip--kb:hover {
@@ -2284,12 +2284,12 @@ const getImgSrc = (url: string) => {
     border-color: rgba(16, 185, 129, 0.35);
     
     .agent-mode-text {
-      color: #059669;
+      color: #0052d9;
       font-weight: 600;
     }
     
     .dropdown-arrow {
-      color: #059669;
+      color: #0052d9;
     }
     
     &:hover {
@@ -2356,7 +2356,7 @@ const getImgSrc = (url: string) => {
   
   &.normal {
     background: rgba(7, 192, 95, 0.12);
-    color: #059669;
+    color: #0052d9;
   }
   
   &.agent {
@@ -2386,7 +2386,7 @@ const getImgSrc = (url: string) => {
   
   &.active {
     background: rgba(16, 185, 129, 0.1);
-    color: #07C05F;
+    color: #0052d9;
     
     &:hover {
       background: rgba(16, 185, 129, 0.15);
@@ -2414,7 +2414,7 @@ const getImgSrc = (url: string) => {
   min-width: 16px;
   height: 16px;
   padding: 0 4px;
-  background: #07C05F;
+  background: #0052d9;
   color: white;
   font-size: 10px;
   font-weight: 600;
@@ -2432,7 +2432,7 @@ const getImgSrc = (url: string) => {
 }
 
 .kb-btn.active .kb-btn-text {
-  color: #07C05F;
+  color: #0052d9;
 }
 
 .websearch-btn {
@@ -2449,7 +2449,7 @@ const getImgSrc = (url: string) => {
     background: rgba(16, 185, 129, 0.1);
     
     .websearch-icon {
-      color: #07C05F;
+      color: #0052d9;
     }
     
     &:hover {
@@ -2502,7 +2502,7 @@ const getImgSrc = (url: string) => {
 }
 
 :global(.tooltip-with-link a) {
-  color: #07C05F;
+  color: #0052d9;
   font-weight: 500;
   text-decoration: none;
 }
@@ -2538,7 +2538,7 @@ const getImgSrc = (url: string) => {
   height: 28px;
   padding: 0;
   background: rgba(16, 185, 129, 0.08);
-  color: #07C05F;
+  color: #0052d9;
   border: 1.5px solid rgba(16, 185, 129, 0.2);
   position: relative;
   display: flex;
@@ -2547,7 +2547,7 @@ const getImgSrc = (url: string) => {
   
   &:hover {
     background: rgba(16, 185, 129, 0.12);
-    border-color: #07C05F;
+    border-color: #0052d9;
   }
   
   &:active {
@@ -2562,7 +2562,7 @@ const getImgSrc = (url: string) => {
     content: '';
     width: 12px;
     height: 12px;
-    background: #07C05F;
+    background: #0052d9;
     border-radius: 50%;
     display: block;
   }
@@ -2572,10 +2572,10 @@ const getImgSrc = (url: string) => {
   width: 28px;
   height: 28px;
   padding: 0;
-  background-color: #07C05F;
+  background-color: #0052d9;
   
   &:hover:not(.disabled) {
-    background-color: #059669;
+    background-color: #0052d9;
   }
   
   &.disabled {
@@ -2641,7 +2641,7 @@ const getImgSrc = (url: string) => {
   flex: 1;
   font-size: 12px;
   font-weight: 600;
-  color: #07C05F;
+  color: #0052d9;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -2650,7 +2650,7 @@ const getImgSrc = (url: string) => {
 .model-dropdown-arrow {
   width: 10px;
   height: 10px;
-  color: #07C05F;
+  color: #0052d9;
   flex-shrink: 0;
   transition: transform 0.12s;
   
@@ -2715,7 +2715,7 @@ const getImgSrc = (url: string) => {
   border-radius: 4px;
   border: 1px solid transparent;
   background: transparent;
-  color: var(--td-brand-color, #07c05f);
+  color: var(--td-brand-color, #0052d9);
   font-size: 12px;
   font-weight: 500;
   cursor: pointer;
@@ -2934,7 +2934,7 @@ const getImgSrc = (url: string) => {
   transition: all 0.12s;
   
   &:hover {
-    color: #059669;
+    color: #0052d9;
     text-decoration: underline;
   }
 }

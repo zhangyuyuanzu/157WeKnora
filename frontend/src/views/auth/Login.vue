@@ -180,7 +180,7 @@
 
     <!-- Logo - Top Left -->
     <a href="https://github.com/Tencent/WeKnora" target="_blank" class="header-logo" :title="$t('common.github')">
-      <img src="@/assets/img/weknora.png" alt="WeKnora" class="logo-image" />
+      <img src="@/assets/img/山南logo-透明底-正方形.png" alt="WeKnora" class="logo-image" />
     </a>
 
     <!-- Header Links - Top Right -->
@@ -711,7 +711,7 @@ onMounted(() => {
   min-height: 100vh;
   overflow: hidden;
   position: relative;
-  background: linear-gradient(225deg, #022c22 0%, #064e3b 15%, #065f46 25%, #047857 38%, #059669 50%, #07C05F 65%, #10B981 78%, #34D399 90%, #6EE7B7 100%);
+  background: linear-gradient(225deg, #001252 0%, #001d6f 15%, #002a8c 25%, #003cab 38%, #266ef1 50%, #0052d9 65%, #4b89f6 78%, #70a3fb 90%, #96bbf8 100%);
 
   &::before {
     content: '';
@@ -1253,8 +1253,8 @@ onMounted(() => {
   }
 
   &.active {
-    background: #F0FDF4;
-    color: #059669;
+    background: #f2f7ff;
+    color: #0052d9;
   }
 }
 
@@ -1326,12 +1326,12 @@ onMounted(() => {
     transition: all 0.2s;
     
     &:focus-within {
-      border-color: #07C05F;
-      box-shadow: 0 0 0 3px rgba(7, 192, 95, 0.1);
+      border-color: #0052d9;
+      box-shadow: 0 0 0 3px rgba(0, 82, 217, 0.1);
     }
     
     &:hover {
-      border-color: #07C05F;
+      border-color: #0052d9;
     }
     
     .t-input__inner {
@@ -1378,14 +1378,14 @@ onMounted(() => {
   transition: all 0.3s;
 
   :deep(.t-button) {
-    background-color: #07C05F;
-    border-color: #07C05F;
+    background-color: #0052d9;
+    border-color: #0052d9;
 
     &:hover {
-      background-color: #06a855;
-      border-color: #06a855;
+      background-color: #0062ff;
+      border-color: #0062ff;
       transform: translateY(-1px);
-      box-shadow: 0 4px 12px rgba(7, 192, 95, 0.3);
+      box-shadow: 0 4px 12px rgba(0, 82, 217, 0.3);
     }
 
     &:active {
@@ -1404,14 +1404,14 @@ onMounted(() => {
   border-bottom: 1px solid #E5E7EB;
 
   .link-button {
-    color: #07C05F;
+    color: #0052d9;
     text-decoration: none;
     margin-left: 4px;
     font-weight: 500;
     transition: all 0.2s;
 
     &:hover {
-      color: #06a855;
+      color: #0062ff;
       text-decoration: underline;
     }
   }
@@ -1437,8 +1437,8 @@ onMounted(() => {
       width: 20px;
       height: 20px;
       border-radius: 50%;
-      background: #D1FAE5;
-      color: #059669;
+      background: #ecf2fe;
+      color: #0052d9;
       display: flex;
       align-items: center;
       justify-content: center;

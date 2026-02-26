@@ -50,6 +50,10 @@
           <t-icon name="setting" class="menu-icon" />
           <span>{{ $t('general.allSettings') }}</span>
         </div>
+        <div class="menu-item" @click="handleChangePassword">
+          <t-icon name="lock-on" class="menu-icon" />
+          <span>{{ $t('auth.changePassword') }}</span>
+        </div>
         <div class="menu-divider"></div>
         <div class="menu-item" @click="openApiDoc">
           <t-icon name="book" class="menu-icon" />
@@ -94,6 +98,11 @@
         </div>
       </div>
     </Transition>
+
+    <ChangePasswordDialog
+      v-model:visible="changePasswordVisible"
+      @success="handlePasswordChanged"
+    />
   </div>
 </template>
 
@@ -105,6 +114,7 @@ import { useAuthStore } from '@/stores/auth'
 import { MessagePlugin } from 'tdesign-vue-next'
 import { getCurrentUser, logout as logoutApi } from '@/api/auth'
 import { useI18n } from 'vue-i18n'
+import ChangePasswordDialog from './ChangePasswordDialog.vue'
 
 const { t } = useI18n()
 
@@ -114,6 +124,7 @@ const authStore = useAuthStore()
 
 const menuRef = ref<HTMLElement>()
 const menuVisible = ref(false)
+const changePasswordVisible = ref(false)
 
 // 用户信息
 const userInfo = ref({
@@ -155,6 +166,18 @@ const handleSettings = () => {
   menuVisible.value = false
   uiStore.openSettings()
   router.push('/platform/settings')
+}
+
+// 修改密码
+const handleChangePassword = () => {
+  menuVisible.value = false
+  changePasswordVisible.value = true
+}
+
+// 密码修改成功
+const handlePasswordChanged = () => {
+  changePasswordVisible.value = false
+  // 可以选择是否强制登出
 }
 
 // 打开 API 文档
@@ -283,7 +306,7 @@ onUnmounted(() => {
   border-radius: 50%;
   overflow: hidden;
   flex-shrink: 0;
-  background: linear-gradient(135deg, #07C05F 0%, #05A34E 100%);
+  background: linear-gradient(135deg, #0052d9 0%, #05A34E 100%);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -407,7 +430,7 @@ onUnmounted(() => {
   }
 
   &:hover .menu-external-icon {
-    color: #07c05f;
+    color: #0052d9;
   }
 }
 

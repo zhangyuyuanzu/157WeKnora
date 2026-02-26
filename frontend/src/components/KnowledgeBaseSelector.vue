@@ -457,7 +457,7 @@ watch(() => props.visible, async (v) => {
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
-  color: #059669;
+  color: #0052d9;
   
   &.faq {
     color: #0052d9;

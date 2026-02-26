@@ -520,8 +520,8 @@ watch(() => props.mode, () => {
   }
 
   &.active {
-    background: #07c05f1a;
-    color: #07c05f;
+    background: #0052d91a;
+    color: #0052d9;
     font-weight: 500;
   }
 }
@@ -646,7 +646,7 @@ watch(() => props.mode, () => {
   color: #fff;
 
   &.admin {
-    background: linear-gradient(135deg, #07c05f, #05a04f);
+    background: linear-gradient(135deg, #0052d9, #05a04f);
   }
 
   &.editor {
@@ -685,7 +685,7 @@ watch(() => props.mode, () => {
   }
 
   .check-icon {
-    color: #07c05f;
+    color: #0052d9;
     font-size: 14px;
   }
 
@@ -722,12 +722,12 @@ watch(() => props.mode, () => {
     width: 80px;
     height: 80px;
     margin: 0 auto 16px;
-    background: linear-gradient(135deg, #07c05f1a, #07c05f0d);
+    background: linear-gradient(135deg, #0052d91a, #0052d90d);
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #07c05f;
+    color: #0052d9;
   }
 
   .illustration-text {
@@ -773,7 +773,7 @@ watch(() => props.mode, () => {
   .step-number {
     width: 24px;
     height: 24px;
-    background: #07c05f;
+    background: #0052d9;
     color: #fff;
     border-radius: 50%;
     display: flex;
@@ -835,7 +835,7 @@ watch(() => props.mode, () => {
 .org-avatar {
   width: 48px;
   height: 48px;
-  background: linear-gradient(135deg, #07c05f, #05a04f);
+  background: linear-gradient(135deg, #0052d9, #05a04f);
   border-radius: 8px;
   display: flex;
   align-items: center;
@@ -907,7 +907,7 @@ watch(() => props.mode, () => {
 
   .t-icon {
     font-size: 18px;
-    color: #07c05f;
+    color: #0052d9;
   }
 }
 </style>
