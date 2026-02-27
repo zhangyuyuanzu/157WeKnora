@@ -295,3 +295,13 @@ export function searchKnowledge(
   if (options?.agent_id) query.set('agent_id', options.agent_id);
   return get(`/api/v1/knowledge/search?${query.toString()}`);
 }
+
+// 知识库更新邮件通知 API
+export function sendKBUpdateNotification(data: {
+  knowledge_base_id: string;
+  recipients: string[];
+  message: string;
+  update_summary?: string;
+}) {
+  return post(`/api/v1/email-notifications/kb-update`, data);
+}

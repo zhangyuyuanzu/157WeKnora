@@ -207,6 +207,8 @@ func BuildContainer(container *dig.Container) *dig.Container {
 	must(container.Provide(service.NewSkillService))
 	must(container.Provide(handler.NewSkillHandler))
 	must(container.Provide(handler.NewOrganizationHandler))
+	must(container.Provide(service.NewEmailNotificationService))
+	must(container.Provide(handler.NewEmailNotificationHandler))
 	logger.Debugf(ctx, "[Container] HTTP handlers registered")
 
 	// Router configuration

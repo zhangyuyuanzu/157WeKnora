@@ -27,6 +27,7 @@ type Config struct {
 	ExtractManager  *ExtractManagerConfig  `yaml:"extract"          json:"extract"`
 	WebSearch       *WebSearchConfig       `yaml:"web_search"       json:"web_search"`
 	PromptTemplates *PromptTemplatesConfig `yaml:"prompt_templates" json:"prompt_templates"`
+	Email           *EmailConfig           `yaml:"email"            json:"email"`
 }
 
 type DocReaderConfig struct {
@@ -281,4 +282,22 @@ func loadPromptTemplates(configDir string) (*PromptTemplatesConfig, error) {
 // WebSearchConfig represents the web search configuration
 type WebSearchConfig struct {
 	Timeout int `yaml:"timeout" json:"timeout"` // 超时时间（秒）
+}
+
+// EmailConfig 邮件通知配置
+type EmailConfig struct {
+	// 是否启用邮件通知功能
+	Enabled bool `yaml:"enabled" json:"enabled"`
+	// SMTP 服务器地址
+	SMTPHost string `yaml:"smtp_host" json:"smtp_host"`
+	// SMTP 服务器端口（25=普通, 465=SSL/TLS, 587=STARTTLS）
+	SMTPPort int `yaml:"smtp_port" json:"smtp_port"`
+	// SMTP 登录用户名
+	Username string `yaml:"username" json:"username"`
+	// SMTP 登录密码或授权码
+	Password string `yaml:"password" json:"password"`
+	// 发件人邮箱地址
+	From string `yaml:"from" json:"from"`
+	// 是否使用直接 TLS 连接（如 465 端口需设为 true）
+	UseTLS bool `yaml:"use_tls" json:"use_tls"`
 }

@@ -49,7 +49,8 @@ type RouterParams struct {
 	TagHandler            *handler.TagHandler
 	CustomAgentHandler    *handler.CustomAgentHandler
 	SkillHandler          *handler.SkillHandler
-	OrganizationHandler   *handler.OrganizationHandler
+	OrganizationHandler       *handler.OrganizationHandler
+	EmailNotificationHandler  *handler.EmailNotificationHandler
 }
 
 // NewRouter 创建新的路由
@@ -116,6 +117,7 @@ func NewRouter(params RouterParams) *gin.Engine {
 		RegisterCustomAgentRoutes(v1, params.CustomAgentHandler)
 		RegisterSkillRoutes(v1, params.SkillHandler)
 		RegisterOrganizationRoutes(v1, params.OrganizationHandler)
+		RegisterEmailNotificationRoutes(v1, params.EmailNotificationHandler)
 	}
 
 	return r
@@ -534,4 +536,13 @@ func RegisterOrganizationRoutes(r *gin.RouterGroup, orgHandler *handler.Organiza
 	// Shared agents route
 	r.GET("/shared-agents", orgHandler.ListSharedAgents)
 	r.POST("/shared-agents/disabled", orgHandler.SetSharedAgentDisabledByMe)
+}
+
+// RegisterEmailNotificationRoutes 注册邮件通知相关的路由
+func RegisterEmailNotificationRoutes(r *gin.RouterGroup, handler *handler.EmailNotificationHandler) {
+	emailNotify := r.Group("/email-notifications")
+	{
+		// 发送知识库更新通知邮件
+		emailNotify.POST("/kb-update", handler.SendKBUpdateNotification)
+	}
 }

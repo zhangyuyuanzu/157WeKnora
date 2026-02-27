@@ -11,6 +11,7 @@ import { useUIStore } from '@/stores/ui';
 import { useOrganizationStore } from '@/stores/organization';
 import { useAuthStore } from '@/stores/auth';
 import KnowledgeBaseEditorModal from './KnowledgeBaseEditorModal.vue';
+import EmailNotificationDialog from '@/components/EmailNotificationDialog.vue';
 const usemenuStore = useMenuStore();
 const uiStore = useUIStore();
 const orgStore = useOrganizationStore();
@@ -971,6 +972,9 @@ const urlDialogVisible = ref(false);
 const urlInputValue = ref('');
 const urlImporting = ref(false);
 
+// 邮件通知弹窗
+const emailNotifyVisible = ref(false);
+
 const handleURLImportClick = () => {
   if (!ensureDocumentKbReady()) return;
   urlInputValue.value = '';
@@ -1214,6 +1218,16 @@ async function createNewSession(value: string): Promise<void> {
                 </span>
               </t-tooltip>
             </div>
+            <t-tooltip v-if="canEdit" :content="$t('emailNotification.title')" placement="top">
+              <button
+                type="button"
+                class="kb-notify-button"
+                :disabled="!kbId"
+                @click="emailNotifyVisible = true"
+              >
+                <t-icon name="mail" size="16px" />
+              </button>
+            </t-tooltip>
             <t-tooltip v-if="canManage" :content="$t('knowledgeBase.settings')" placement="top">
               <button
                 type="button"
@@ -1663,6 +1677,13 @@ async function createNewSession(value: string): Promise<void> {
       <FAQEntryManager v-if="kbId" :kb-id="kbId" />
     </div>
   </template>
+
+  <!-- 邮件通知弹窗 -->
+  <EmailNotificationDialog
+    v-model:visible="emailNotifyVisible"
+    :kb-id="kbId"
+    :kb-name="kbInfo?.name || ''"
+  />
 
   <!-- 知识库编辑器（创建/编辑统一组件） -->
   <KnowledgeBaseEditorModal 
@@ -2380,6 +2401,36 @@ async function createNewSession(value: string): Promise<void> {
 
 .document-upload-input {
   display: none;
+}
+
+.kb-notify-button {
+  width: 30px;
+  height: 30px;
+  border: none;
+  border-radius: 50%;
+  background: #f5f6f8;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #6b7280;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  padding: 0;
+
+  &:hover:not(:disabled) {
+    background: #e6f0ff;
+    color: #0052d9;
+    box-shadow: none;
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+    opacity: 0.4;
+  }
+
+  :deep(.t-icon) {
+    font-size: 18px;
+  }
 }
 
 .kb-settings-button {

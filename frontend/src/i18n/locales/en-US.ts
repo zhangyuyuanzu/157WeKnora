@@ -221,6 +221,28 @@ export default {
     noKnowledge: 'No knowledge bases available',
     loadingFailed: 'Failed to load knowledge bases'
   },
+  emailNotification: {
+    title: 'Send Update Notification',
+    send: 'Send Notification',
+    knowledgeBase: 'Knowledge Base',
+    recipients: 'Recipients',
+    recipientPlaceholder: 'Enter email address, press Enter to add',
+    addRecipient: 'Add',
+    recipientTip: 'Supports multiple emails separated by commas, semicolons, or spaces',
+    message: 'Notification Message',
+    messagePlaceholder: 'Enter your message, e.g., The knowledge base has been updated, please review',
+    updateSummary: 'Update Summary',
+    updateSummaryPlaceholder: 'Briefly describe what was updated, e.g., Added product manual, updated FAQ docs',
+    optional: 'optional',
+    invalidEmail: "'{email}' is not a valid email address",
+    duplicateEmail: 'This email has already been added',
+    recipientRequired: 'Please add at least one recipient',
+    messageRequired: 'Please enter a notification message',
+    sendSuccess: 'Notification sent successfully to {count} recipient(s)',
+    sendPartial: 'Partially sent: {success} succeeded, {fail} failed',
+    sendAllFailed: 'All notification emails failed to send',
+    sendFailed: 'Failed to send notification email',
+  },
 
   agent: {
     taskLabel: 'Task:',
