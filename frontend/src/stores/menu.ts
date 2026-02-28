@@ -20,6 +20,7 @@ export const useMenuStore = defineStore('menuStore', () => {
     { title: '', titleKey: 'menu.knowledgeBase', icon: 'zhishiku', path: 'knowledge-bases' },
     { title: '', titleKey: 'menu.agents', icon: 'agent', path: 'agents' },
     { title: '', titleKey: 'menu.organizations', icon: 'organization', path: 'organizations' },
+    { title: '', titleKey: 'menu.knowledgePush', icon: 'knowledge-push', path: 'knowledge-push' },
     {
       title: '',
       titleKey: 'menu.chat',
@@ -55,14 +56,14 @@ export const useMenuStore = defineStore('menuStore', () => {
   )
 
   const clearMenuArr = () => {
-    const chatMenu = menuArr[3]
+    const chatMenu = menuArr[4]
     if (chatMenu && chatMenu.children) {
       chatMenu.children = createMenuChildren()
     }
   }
 
   const updatemenuArr = (obj: any) => {
-    const chatMenu = menuArr[3]
+    const chatMenu = menuArr[4]
     if (!chatMenu.children) {
       chatMenu.children = createMenuChildren()
     }
@@ -73,7 +74,7 @@ export const useMenuStore = defineStore('menuStore', () => {
   }
 
   const updataMenuChildren = (item: MenuChild) => {
-    const chatMenu = menuArr[3]
+    const chatMenu = menuArr[4]
     if (!chatMenu.children) {
       chatMenu.children = createMenuChildren()
     }
@@ -81,7 +82,7 @@ export const useMenuStore = defineStore('menuStore', () => {
   }
 
   const updatasessionTitle = (sessionId: string, title: string) => {
-    const chatMenu = menuArr[3]
+    const chatMenu = menuArr[4]
     chatMenu.children?.forEach((item: MenuChild) => {
       if (item.id === sessionId) {
         item.title = title

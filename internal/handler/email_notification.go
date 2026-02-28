@@ -2,6 +2,7 @@ package handler
 
 import (
 	"net/http"
+	"strconv"
 
 	apperrors "github.com/Tencent/WeKnora/internal/errors"
 	"github.com/Tencent/WeKnora/internal/logger"
@@ -15,16 +16,19 @@ import (
 type EmailNotificationHandler struct {
 	emailService interfaces.EmailNotificationService
 	kbService    interfaces.KnowledgeBaseService
+	userService  interfaces.UserService
 }
 
 // NewEmailNotificationHandler 创建邮件通知处理器实例
 func NewEmailNotificationHandler(
 	emailService interfaces.EmailNotificationService,
 	kbService interfaces.KnowledgeBaseService,
+	userService interfaces.UserService,
 ) *EmailNotificationHandler {
 	return &EmailNotificationHandler{
 		emailService: emailService,
 		kbService:    kbService,
+		userService:  userService,
 	}
 }
 
@@ -79,5 +83,52 @@ func (h *EmailNotificationHandler) SendKBUpdateNotification(c *gin.Context) {
 	c.JSON(http.StatusOK, gin.H{
 		"success": true,
 		"data":    resp,
+	})
+}
+
+// SearchPlatformUsers godoc
+// @Summary      搜索平台用户
+// @Description  根据用户名或邮箱搜索平台用户，用于知识推送时选择收件人
+// @Tags         邮件通知
+// @Produce      json
+// @Param        q      query  string  false  "搜索关键词（用户名或邮箱）"
+// @Param        limit  query  int     false  "返回数量限制" default(20)
+// @Success      200    {object}  map[string]interface{}
+// @Security     Bearer
+// @Router       /email-notifications/search-users [get]
+func (h *EmailNotificationHandler) SearchPlatformUsers(c *gin.Context) {
+	ctx := c.Request.Context()
+	query := c.Query("q")
+
+	limit := 20
+	if l := c.Query("limit"); l != "" {
+		if parsed, err := strconv.Atoi(l); err == nil && parsed > 0 {
+			limit = parsed
+		}
+	}
+	if limit > 100 {
+		limit = 100
+	}
+
+	users, err := h.userService.SearchUsers(ctx, query, limit)
+	if err != nil {
+		logger.Errorf(ctx, "搜索平台用户失败: %v", err)
+		c.Error(apperrors.NewInternalServerError("搜索用户失败"))
+		return
+	}
+
+	result := make([]gin.H, 0, len(users))
+	for _, u := range users {
+		result = append(result, gin.H{
+			"id":       u.ID,
+			"username": u.Username,
+			"email":    u.Email,
+			"avatar":   u.Avatar,
+		})
+	}
+
+	c.JSON(http.StatusOK, gin.H{
+		"success": true,
+		"data":    result,
 	})
 }

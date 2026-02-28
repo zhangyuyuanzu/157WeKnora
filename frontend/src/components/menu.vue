@@ -15,7 +15,7 @@
                      :class="['menu_item', item.childrenPath && item.childrenPath == currentpath ? 'menu_item_c_active' : isMenuItemActive(item.path) ? 'menu_item_active' : '']">
                     <div class="menu_item-box">
                         <div class="menu_icon">
-                            <img class="icon" :src="getImgSrc(item.icon == 'zhishiku' ? knowledgeIcon : item.icon == 'agent' ? agentIcon : item.icon == 'organization' ? organizationIcon : item.icon == 'logout' ? logoutIcon : item.icon == 'setting' ? settingIcon : prefixIcon)" alt="">
+                            <img class="icon" :src="getImgSrc(item.icon == 'zhishiku' ? knowledgeIcon : item.icon == 'agent' ? agentIcon : item.icon == 'organization' ? organizationIcon : item.icon == 'knowledge-push' ? knowledgePushIcon : item.icon == 'logout' ? logoutIcon : item.icon == 'setting' ? settingIcon : prefixIcon)" alt="">
                         </div>
                         <span class="menu_title" :title="item.title">{{ item.title }}</span>
                         <span v-if="item.path === 'organizations' && orgStore.totalPendingJoinRequestCount > 0" class="menu-pending-badge" :title="t('organization.settings.pendingJoinRequestsBadge')">{{ orgStore.totalPendingJoinRequestCount }}</span>
@@ -136,6 +136,8 @@ const isMenuItemActive = (itemPath: string): boolean => {
             return currentRoute === 'agentList';
         case 'organizations':
             return currentRoute === 'organizationList';
+        case 'knowledge-push':
+            return currentRoute === 'knowledgePush';
         case 'creatChat':
             return currentRoute === 'kbCreatChat' || currentRoute === 'globalCreatChat';
         case 'settings':
@@ -164,13 +166,13 @@ const getIconActiveState = (itemPath: string) => {
 // 分离上下两部分菜单
 const topMenuItems = computed<MenuItem[]>(() => {
     return (menuArr.value as unknown as MenuItem[]).filter((item: MenuItem) => 
-        item.path === 'knowledge-bases' || item.path === 'agents' || item.path === 'organizations' || item.path === 'creatChat'
+        item.path === 'knowledge-bases' || item.path === 'agents' || item.path === 'organizations' || item.path === 'knowledge-push' || item.path === 'creatChat'
     );
 });
 
 const bottomMenuItems = computed<MenuItem[]>(() => {
     return (menuArr.value as unknown as MenuItem[]).filter((item: MenuItem) => {
-        if (item.path === 'knowledge-bases' || item.path === 'agents' || item.path === 'organizations' || item.path === 'creatChat') {
+        if (item.path === 'knowledge-bases' || item.path === 'agents' || item.path === 'organizations' || item.path === 'knowledge-push' || item.path === 'creatChat') {
             return false;
         }
         return true;
@@ -423,6 +425,7 @@ let logoutIcon = ref('logout.svg');
 let settingIcon = ref('setting.svg'); // 设置图标
 let agentIcon = ref('agent.svg'); // 智能体图标
 let organizationIcon = ref('organization.svg'); // 组织图标
+let knowledgePushIcon = ref('knowledge-push.svg'); // 知识推送图标
 let pathPrefix = ref(route.name)
   const getIcon = (path: string) => {
       // 根据当前路由状态更新所有图标
@@ -440,6 +443,9 @@ let pathPrefix = ref(route.name)
       
       // 组织图标：只在组织页面显示绿色
       organizationIcon.value = organizationsActiveState ? 'organization-green.svg' : 'organization.svg';
+      
+      // 知识推送图标：只在知识推送页面显示绿色
+      knowledgePushIcon.value = route.name === 'knowledgePush' ? 'knowledge-push-green.svg' : 'knowledge-push.svg';
       
       // 对话图标：只在对话创建页面显示绿色，在知识库页面显示灰色，其他情况显示默认
       prefixIcon.value = creatChatActiveState.isCreatChatActive ? 'prefixIcon-green.svg' : 
@@ -468,6 +474,9 @@ const handleMenuClick = async (path: string) => {
     } else if (path === 'organizations') {
         // 组织菜单项：跳转到组织列表
         router.push('/platform/organizations')
+    } else if (path === 'knowledge-push') {
+        // 知识推送菜单项：跳转到知识推送页面
+        router.push('/platform/knowledge-push')
     } else if (path === 'settings') {
         // 设置菜单项：打开设置弹窗并跳转路由
         uiStore.openSettings()

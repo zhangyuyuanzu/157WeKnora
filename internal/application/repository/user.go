@@ -98,12 +98,15 @@ func (r *userRepository) ListUsers(ctx context.Context, offset, limit int) ([]*t
 // SearchUsers searches users by username or email
 func (r *userRepository) SearchUsers(ctx context.Context, query string, limit int) ([]*types.User, error) {
 	var users []*types.User
-	searchPattern := "%" + query + "%"
 
 	dbQuery := r.db.WithContext(ctx).
-		Where("username ILIKE ? OR email ILIKE ?", searchPattern, searchPattern).
 		Where("is_active = ?", true).
 		Order("username ASC")
+
+	if query != "" {
+		searchPattern := "%" + query + "%"
+		dbQuery = dbQuery.Where("username ILIKE ? OR email ILIKE ?", searchPattern, searchPattern)
+	}
 
 	if limit > 0 {
 		dbQuery = dbQuery.Limit(limit)

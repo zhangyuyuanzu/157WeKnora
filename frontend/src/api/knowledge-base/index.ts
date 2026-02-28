@@ -305,3 +305,11 @@ export function sendKBUpdateNotification(data: {
 }) {
   return post(`/api/v1/email-notifications/kb-update`, data);
 }
+
+// 搜索平台用户（用于知识推送收件人选择）
+export function searchPlatformUsers(query: string, limit: number = 20) {
+  const params = new URLSearchParams();
+  if (query) params.set('q', query);
+  params.set('limit', String(limit));
+  return get(`/api/v1/email-notifications/search-users?${params.toString()}`);
+}

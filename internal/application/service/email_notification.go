@@ -83,7 +83,7 @@ func (s *emailNotificationService) buildEmailBody(kbName, message, updateSummary
 	if updateSummary != "" {
 		summarySection = fmt.Sprintf(`
             <div style="background-color: #f0f7ff; border-left: 4px solid #1890ff; padding: 12px 16px; margin: 16px 0; border-radius: 4px;">
-                <p style="margin: 0; color: #333; font-weight: bold;">📋 更新内容：</p>
+                <p style="margin: 0; color: #333; font-weight: bold;">更新内容：</p>
                 <p style="margin: 8px 0 0 0; color: #555;">%s</p>
             </div>`, updateSummary)
 	}
@@ -98,7 +98,7 @@ func (s *emailNotificationService) buildEmailBody(kbName, message, updateSummary
     <div style="max-width: 600px; margin: 0 auto; background-color: #ffffff; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); overflow: hidden;">
         <!-- Header -->
         <div style="background: linear-gradient(135deg, #1890ff, #096dd9); padding: 24px 32px; color: white;">
-            <h1 style="margin: 0; font-size: 20px; font-weight: 600;">📚 知识库更新通知</h1>
+            <h1 style="margin: 0; font-size: 20px; font-weight: 600;">知识库更新通知</h1>
         </div>
         <!-- Content -->
         <div style="padding: 32px;">
@@ -108,7 +108,7 @@ func (s *emailNotificationService) buildEmailBody(kbName, message, updateSummary
             </p>
             <!-- 自定义消息 -->
             <div style="background-color: #fff7e6; border-left: 4px solid #ffa940; padding: 12px 16px; margin: 16px 0; border-radius: 4px;">
-                <p style="margin: 0; color: #333; font-weight: bold;">💬 通知消息：</p>
+                <p style="margin: 0; color: #333; font-weight: bold;">通知消息：</p>
                 <p style="margin: 8px 0 0 0; color: #555;">%s</p>
             </div>
             %s

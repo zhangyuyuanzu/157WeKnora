@@ -544,5 +544,7 @@ func RegisterEmailNotificationRoutes(r *gin.RouterGroup, handler *handler.EmailN
 	{
 		// 发送知识库更新通知邮件
 		emailNotify.POST("/kb-update", handler.SendKBUpdateNotification)
+		// 搜索平台用户（用于选择收件人）
+		emailNotify.GET("/search-users", handler.SearchPlatformUsers)
 	}
 }

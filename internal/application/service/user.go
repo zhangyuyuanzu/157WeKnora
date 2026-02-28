@@ -427,10 +427,7 @@ func (s *userService) GetCurrentUser(ctx context.Context) (*types.User, error) {
 	return user, nil
 }
 
-// SearchUsers searches users by username or email
+// SearchUsers searches users by username or email. When query is empty, returns all users (up to limit).
 func (s *userService) SearchUsers(ctx context.Context, query string, limit int) ([]*types.User, error) {
-	if query == "" {
-		return []*types.User{}, nil
-	}
 	return s.userRepo.SearchUsers(ctx, query, limit)
 }
