@@ -70,7 +70,8 @@ func (p *PluginDataAnalysis) OnEvent(
 	targetFile := dataFiles[0]
 
 	// Get Knowledge details to get file path
-	knowledge, err := p.knowledgeService.GetKnowledgeByID(ctx, targetFile.KnowledgeID)
+	// Use GetKnowledgeByIDOnly (cross-tenant) to support files from shared knowledge bases
+	knowledge, err := p.knowledgeService.GetKnowledgeByIDOnly(ctx, targetFile.KnowledgeID)
 	if err != nil {
 		logger.Errorf(ctx, "Failed to get knowledge %s: %v", targetFile.KnowledgeID, err)
 		return next()

@@ -442,7 +442,8 @@ func (s *agentService) getKnowledgeBaseInfos(ctx context.Context, kbIDs []string
 
 	for _, kbID := range kbIDs {
 		// Get knowledge base details
-		kb, err := s.knowledgeBaseService.GetKnowledgeBaseByID(ctx, kbID)
+		// Use GetKnowledgeBaseByIDOnly (cross-tenant) to support shared KBs from other tenants
+		kb, err := s.knowledgeBaseService.GetKnowledgeBaseByIDOnly(ctx, kbID)
 		if err != nil {
 			logger.Warnf(ctx, "Failed to get knowledge base %s: %v", secutils.SanitizeForLog(kbID), err)
 			// Add fallback info
@@ -457,12 +458,21 @@ func (s *agentService) getKnowledgeBaseInfos(ctx context.Context, kbIDs []string
 			continue
 		}
 
+		// For shared KBs (belonging to another tenant), use the KB's own tenant context
+		// so that document listing queries target the correct tenant's data
+		kbCtx := ctx
+		if currentTenantID, ok := ctx.Value(types.TenantIDContextKey).(uint64); ok {
+			if kb.TenantID > 0 && kb.TenantID != currentTenantID {
+				kbCtx = context.WithValue(ctx, types.TenantIDContextKey, kb.TenantID)
+			}
+		}
+
 		// Get document count and recent documents
 		docCount := 0
 		recentDocs := []agent.RecentDocInfo{}
 
 		if kb.Type == types.KnowledgeBaseTypeFAQ {
-			pageResult, err := s.knowledgeService.ListFAQEntries(ctx, kbID, &types.Pagination{
+			pageResult, err := s.knowledgeService.ListFAQEntries(kbCtx, kbID, &types.Pagination{
 				Page:     1,
 				PageSize: 10,
 			}, 0, "", "", "")
@@ -487,13 +497,13 @@ func (s *agentService) getKnowledgeBaseInfos(ctx context.Context, kbIDs []string
 					}
 				}
 			} else if err != nil {
-				logger.Warnf(ctx, "Failed to list FAQ entries for %s: %v", kbID, err)
+				logger.Warnf(kbCtx, "Failed to list FAQ entries for %s: %v", kbID, err)
 			}
 		}
 
 		// Fallback to generic knowledge listing when not FAQ or FAQ retrieval failed
 		if kb.Type != types.KnowledgeBaseTypeFAQ || len(recentDocs) == 0 {
-			pageResult, err := s.knowledgeService.ListPagedKnowledgeByKnowledgeBaseID(ctx, kbID, &types.Pagination{
+			pageResult, err := s.knowledgeService.ListPagedKnowledgeByKnowledgeBaseID(kbCtx, kbID, &types.Pagination{
 				Page:     1,
 				PageSize: 10,
 			}, "", "", "")

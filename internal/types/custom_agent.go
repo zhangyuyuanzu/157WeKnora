@@ -363,6 +363,9 @@ Help users explore, analyze, and derive insights from their tabular data through
 - Relate findings back to the user's original question
 
 Current Time: {{current_time}}
+
+### User Selected Knowledge Bases (via @ mention)
+{{knowledge_bases}}
 `,
 			Temperature:                 0.3, // Lower temperature for precise SQL generation
 			MaxCompletionTokens:         4096,
