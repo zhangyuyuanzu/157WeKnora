@@ -55,7 +55,7 @@
           <span>{{ $t('auth.changePassword') }}</span>
         </div>
         <div class="menu-divider"></div>
-        <div class="menu-item" @click="openApiDoc">
+        <div class="menu-item menu-item--disabled">
           <t-icon name="book" class="menu-icon" />
           <span class="menu-text-with-icon">
             <span>{{ $t('tenant.apiDocument') }}</span>
@@ -67,7 +67,7 @@
             </svg>
           </span>
         </div>
-        <div class="menu-item" @click="openWebsite">
+        <div class="menu-item menu-item--disabled">
           <t-icon name="home" class="menu-icon" />
           <span class="menu-text-with-icon">
             <span>{{ $t('common.website') }}</span>
@@ -79,7 +79,7 @@
             </svg>
           </span>
         </div>
-        <div class="menu-item" @click="openGithub">
+        <div class="menu-item menu-item--disabled">
           <t-icon name="logo-github" class="menu-icon" />
           <span class="menu-text-with-icon">
             <span>GitHub</span>
@@ -380,6 +380,13 @@ onUnmounted(() => {
 
   &:hover {
     background: #f5f7fa;
+  }
+
+  &.menu-item--disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+    pointer-events: none;
+    filter: grayscale(100%);
   }
 
   &.danger {

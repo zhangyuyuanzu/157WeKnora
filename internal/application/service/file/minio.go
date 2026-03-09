@@ -45,6 +45,17 @@ func NewMinioFileService(endpoint,
 		if err != nil {
 			return nil, fmt.Errorf("failed to create bucket: %w", err)
 		}
+		// Set public read policy for the newly created bucket
+		policy := fmt.Sprintf(
+			`{"Version":"2012-10-17","Statement":[`+
+				`{"Effect":"Allow","Principal":{"AWS":["*"]},"Action":["s3:GetBucketLocation","s3:ListBucket"],"Resource":["arn:aws:s3:::%s"]},`+
+				`{"Effect":"Allow","Principal":{"AWS":["*"]},"Action":["s3:GetObject"],"Resource":["arn:aws:s3:::%s/*"]}`+
+				`]}`,
+			bucketName, bucketName,
+		)
+		if err = client.SetBucketPolicy(context.Background(), bucketName, policy); err != nil {
+			return nil, fmt.Errorf("failed to set bucket policy: %w", err)
+		}
 	}
 
 	return &minioFileService{

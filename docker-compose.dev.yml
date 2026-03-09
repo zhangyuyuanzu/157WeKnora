@@ -114,9 +114,14 @@ services:
     environment:
       - MINIO_ENDPOINT=minio:9000
       - STORAGE_TYPE=${STORAGE_TYPE:-}
-      - MINIO_PUBLIC_ENDPOINT=http://localhost:${MINIO_PORT:-9000}
+      - MINIO_PUBLIC_ENDPOINT=http://10.1.110.157:${MINIO_PORT:-9000}
       - MINERU_ENDPOINT=${MINERU_ENDPOINT:-}
-      - MAX_FILE_SIZE_MB=${MAX_FILE_SIZE_MB:-}}
+      - MAX_FILE_SIZE_MB=${MAX_FILE_SIZE_MB:-}
+      - OCR_BACKEND=${OCR_BACKEND:-paddle}
+      - OCR_API_BASE_URL=${OCR_API_BASE_URL:-}
+      - OCR_API_KEY=${OCR_API_KEY:-}
+      - OCR_MODEL=${OCR_MODEL:-}
+      - IMAGE_MAX_CONCURRENT=${IMAGE_MAX_CONCURRENT:-1}
     healthcheck:
       test: ["CMD", "grpc_health_probe", "-addr=:50051"]
       interval: 30s

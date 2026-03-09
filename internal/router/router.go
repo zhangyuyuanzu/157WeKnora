@@ -89,6 +89,9 @@ func NewRouter(params RouterParams) *gin.Engine {
 		))
 	}
 
+	// 文档静态文件（不需要认证，公开访问）
+	r.Static("/docs", "./docs")
+
 	// 认证中间件
 	r.Use(middleware.Auth(params.TenantService, params.UserService, params.Config))
 
