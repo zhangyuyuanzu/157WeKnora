@@ -11,6 +11,7 @@ export default {
     newSession: "새 세션",
     confirmLogout: "정말 로그아웃 하시겠습니까?",
     systemInfo: "시스템 정보",
+    platformGuide: "플랫폼 가이드",
   },
   knowledgeBase: {
     title: "지식베이스",
@@ -764,6 +765,7 @@ export default {
     reset: "초기화",
     clear: "지우기",
     website: "공식 웹사이트",
+    platformGuide: "플랫폼 가이드",
     on: "켜기",
     off: "끄기",
     resetToDefault: "기본값 복원",

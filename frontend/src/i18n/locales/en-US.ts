@@ -13,7 +13,8 @@ export default {
     deleteRecord: 'Delete Record',
     newSession: 'New Chat',
     confirmLogout: 'Are you sure you want to logout?',
-    systemInfo: 'System Information'
+    systemInfo: 'System Information',
+    platformGuide: 'Platform Guide'
   },
   listSpaceSidebar: {
     title: 'Filter',
@@ -997,6 +998,7 @@ export default {
     reset: 'Reset',
     clear: 'Clear',
     website: 'Official Website',
+    platformGuide: 'Platform Guide',
     on: 'On',
     off: 'Off',
     resetToDefault: 'Reset to default',

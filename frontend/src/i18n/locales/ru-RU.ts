@@ -10,7 +10,8 @@ export default {
     deleteRecord: 'Удалить запись',
     newSession: 'Новый диалог',
     confirmLogout: 'Вы уверены, что хотите выйти?',
-    systemInfo: 'Информация о системе'
+    systemInfo: 'Информация о системе',
+    platformGuide: 'Руководство по платформе'
   },
   knowledgeBase: {
     title: 'База знаний',
@@ -670,6 +671,7 @@ export default {
     reset: 'Сбросить',
     clear: 'Очистить',
     website: 'Официальный сайт',
+    platformGuide: 'Руководство по платформе',
     github: 'GitHub',
     wechat: '微信公众号',
     on: 'Вкл',

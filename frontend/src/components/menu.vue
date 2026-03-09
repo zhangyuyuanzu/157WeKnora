@@ -52,6 +52,26 @@
         
         <!-- 下半部分：用户菜单 -->
         <div class="menu_bottom">
+            <!-- 平台功能介绍按钮 -->
+            <a
+                href="http://10.1.110.157:8080/docs/知识库管理系统介绍及操作方法.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="platform-guide-btn"
+                :title="t('menu.platformGuide')"
+            >
+                <svg class="guide-btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                    <polyline points="14 2 14 8 20 8"/>
+                    <line x1="16" y1="13" x2="8" y2="13"/>
+                    <line x1="16" y1="17" x2="8" y2="17"/>
+                    <polyline points="10 9 9 9 8 9"/>
+                </svg>
+                <span class="guide-btn-text">{{ t('menu.platformGuide') }}</span>
+                <svg class="guide-btn-external" viewBox="0 0 16 16" fill="currentColor">
+                    <path d="M12.667 8a.667.667 0 0 1 .666.667v4a2.667 2.667 0 0 1-2.666 2.666H4.667a2.667 2.667 0 0 1-2.667-2.666V5.333a2.667 2.667 0 0 1 2.667-2.666h4a.667.667 0 1 1 0 1.333h-4a1.333 1.333 0 0 0-1.333 1.333v7.334A1.333 1.333 0 0 0 4.667 13.333h6a1.333 1.333 0 0 0 1.333-1.333v-4A.667.667 0 0 1 12.667 8Zm2.666-6.667v4a.667.667 0 0 1-1.333 0V3.276l-5.195 5.195a.667.667 0 0 1-.943-.943l5.195-5.195h-2.057a.667.667 0 0 1 0-1.333h4a.667.667 0 0 1 .666.666Z"/>
+                </svg>
+            </a>
             <UserMenu />
         </div>
         
@@ -603,6 +623,67 @@ const mouseleaveMenu = (path: string) => {
         flex-shrink: 0;
         display: flex;
         flex-direction: column;
+    }
+
+    .platform-guide-btn {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        margin: 0 8px 8px 8px;
+        padding: 10px 14px;
+        background: linear-gradient(135deg, #0052d9 0%, #0066ff 100%);
+        color: #fff;
+        border-radius: 8px;
+        text-decoration: none;
+        font-size: 13px;
+        font-weight: 600;
+        letter-spacing: 0.02em;
+        box-shadow: 0 2px 8px rgba(0, 82, 217, 0.35);
+        transition: all 0.2s ease;
+        cursor: pointer;
+        overflow: hidden;
+        position: relative;
+
+        &::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, rgba(255,255,255,0.15) 0%, transparent 60%);
+            pointer-events: none;
+        }
+
+        &:hover {
+            background: linear-gradient(135deg, #003ab5 0%, #0052d9 100%);
+            box-shadow: 0 4px 14px rgba(0, 82, 217, 0.5);
+            transform: translateY(-1px);
+            color: #fff;
+        }
+
+        &:active {
+            transform: translateY(0);
+            box-shadow: 0 2px 6px rgba(0, 82, 217, 0.3);
+        }
+
+        .guide-btn-icon {
+            width: 16px;
+            height: 16px;
+            flex-shrink: 0;
+            opacity: 0.95;
+        }
+
+        .guide-btn-text {
+            flex: 1;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .guide-btn-external {
+            width: 12px;
+            height: 12px;
+            flex-shrink: 0;
+            opacity: 0.75;
+        }
     }
 
     .menu_box {

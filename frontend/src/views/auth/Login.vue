@@ -185,6 +185,22 @@
 
     <!-- Header Links - Top Right -->
     <div class="header-links">
+      <a
+        href="http://10.1.110.157:8080/docs/知识库管理系统介绍及操作方法.pdf"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="header-link header-link--guide"
+        :title="$t('common.platformGuide')"
+      >
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+          <polyline points="14 2 14 8 20 8"/>
+          <line x1="16" y1="13" x2="8" y2="13"/>
+          <line x1="16" y1="17" x2="8" y2="17"/>
+          <polyline points="10 9 9 9 8 9"/>
+        </svg>
+        <span class="link-text">{{ $t('common.platformGuide') }}</span>
+      </a>
       <span class="header-link header-link--disabled" :title="$t('common.website')">
         <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round">
           <circle cx="12" cy="12" r="10"/>
@@ -1117,6 +1133,28 @@ onMounted(() => {
   cursor: not-allowed !important;
   pointer-events: none;
   filter: grayscale(100%);
+}
+
+.header-link--guide {
+  background: linear-gradient(135deg, #0052d9 0%, #1677ff 100%) !important;
+  border-color: rgba(0, 82, 217, 0.6) !important;
+  color: #ffffff !important;
+  font-weight: 700 !important;
+  box-shadow: 0 3px 12px rgba(0, 82, 217, 0.5), 0 0 0 2px rgba(255,255,255,0.15) !important;
+  animation: guide-pulse 2.5s ease-in-out infinite;
+
+  &:hover {
+    background: linear-gradient(135deg, #003ab5 0%, #0052d9 100%) !important;
+    border-color: rgba(0, 58, 181, 0.8) !important;
+    box-shadow: 0 5px 20px rgba(0, 82, 217, 0.65), 0 0 0 2px rgba(255,255,255,0.25) !important;
+    transform: translateY(-2px) scale(1.03);
+    animation: none;
+  }
+}
+
+@keyframes guide-pulse {
+  0%, 100% { box-shadow: 0 3px 12px rgba(0, 82, 217, 0.5), 0 0 0 2px rgba(255,255,255,0.15); }
+  50% { box-shadow: 0 3px 18px rgba(0, 82, 217, 0.8), 0 0 0 3px rgba(255,255,255,0.3); }
 }
 
 .header-link {

@@ -14,6 +14,7 @@ export default {
     newSession: "新会话",
     confirmLogout: "确定要退出登录吗？",
     systemInfo: "系统信息",
+    platformGuide: "平台功能介绍",
   },
   listSpaceSidebar: {
     title: "筛选",
@@ -842,6 +843,7 @@ export default {
     reset: "重置",
     clear: "清空",
     website: "官方网站",
+    platformGuide: "平台功能介绍",
     on: "开启",
     off: "关闭",
     resetToDefault: "恢复默认",
